@@ -1,0 +1,21 @@
+\chapter{Conclusions and future work}
+%Conclusions and future work.
+
+\section*{Conclusions}
+
+Model checking is a complex task that consists of the automatic verification of properties in finite-state systems, such as elevators or vending machines. When applied to real-time systems, this task often becomes intractable due to the state explosion problem, leading to high computational costs. To address this issue, variations of the model are created, simplifying certain aspects depending on the system’s objectives, based on the theory of Software Product Lines. For this purpose, the Uppex tool is used, which, through a Microsoft Excel interface, reads the configurations selected by the user and builds an Uppaal model with small adjustments according to each configuration, also including the respective properties to be verified. As a result, it returns an HTML document summarizing the configurations, properties, and whether or not they were successfully verified.
+
+The objective is to incorporate IMITATOR—a tool for the analysis and verification of real-time systems that also enables parameter synthesis—providing greater flexibility, optimization, and versatility to the system, as an additional backend and Model Checker within the Uppex tool. This objective was achieved through the changes made and demonstrated in Chapter 4. To test these modifications, the Worker-Hammer example was used, producing the expected results, notably the inclusion of parametric intervals in the output as well as the visual representation of the variations of the example model.
+
+\section*{Prospect for future work}
+
+As future work, there are several improvements that can be made:
+
+\begin{itemize}
+
+    \item The development of an user interface that encapsulates the current method of running the tool, which is currently done via command line. This would make it more appealing to professionals who are less familiar with the area, while also simplifying the selection of the model checker type and the choice of available options.
+
+    \item Improvement of the report generated from the system analysis, particularly the visual representation of the models. Many of the model images are often repeated, and to make the report more compact and less extensive, one possible enhancement would be to group the images that are similar together.
+
+\end{itemize}
+		

@@ -1,0 +1,202 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{dissertation}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{amsmath,amssymb}
+\usepackage{colortbl}
+\usepackage[utf8]{inputenc}
+\usepackage{subcaption}
+\usepackage{todonotes}
+\makeglossaries
+\makeindex
+
+%\logo{EAAD}{School of Architecture, Art and Design}{}
+%\logoB{EAAD}{School of Architecture, Art and Design}{}
+
+%\logo{EC}{School of Sciences}{}
+%\logoB{EC}{School of Sciences}{}
+
+%\logo{ED}{Law School}{}
+%\logoB{ED}{Law School}{}
+
+\logo{EE}{School of Engineering}{}
+\logoB{EE}{School of Engineering}{}
+
+%\logo{EEG}{School of Economics and Management}{}
+%\logoB{EEG}{School of Economics and Management}{}
+
+%\logo{ELACH}{School of Letters, Arts and Human Sciences}{}
+%\logoB{ELACH}{School of Letters, Arts and Human Sciences}{}
+
+%\logo{EM}{Medical school}{}
+%\logoB{EM}{Medical school}{}
+
+%\logo{EP}{School of Psychology}{}
+%\logoB{EP}{School of Psychology}{}
+
+%\logo{ESE}{Higher School of Nursing}{}
+%\logoB{ESE}{Higher School of Nursing}{}
+
+%\logo{I3Bs}{Research Institute on Biomaterials,}{Biodegradables and Biomimetics}
+%\logoB{I3Bs}{Research Institute on Biomaterials,}{Biodegradables and Biomimetics}
+
+%\logo{ICS}{Institute of Social Sciences}{}
+%\logoB{ICS}{Institute of Social Sciences}{}
+
+%\logo{IE}{Institute of Education}{}
+%\logoB{IE}{Institute of Education}{}
+
+\author{Alexandre de Jesus Sousa e Silva}
+
+\titleA{Analysis of families of Real Time systems}
+\titleB{with IMITATOR}
+
+
+
+\masters{Master’s Dissertation in Physics Engineering}
+%\area{Area of specialization}
+\supervisor{José Miguel Paiva Proença}
+\cosupervisor{Renato Jorge Araújo Neves}
+
+\tcbuselibrary{listingsutf8}
+\newtcolorbox{commandline}{
+  colback=black,
+  coltext=green!60!black,
+  boxrule=0pt,
+  arc=0mm,
+  outer arc=0mm,
+  left=2pt,
+  right=2pt,
+  top=2pt,
+  bottom=2pt,
+  boxsep=2pt,
+  fontupper=\ttfamily,
+  enhanced,
+  sharp corners
+}
+
+\bibpunct[,]{(}{)}{;}{a}{,}{,}
+
+\newcommand{\imitator}[1]{\texttt{\textbf{\textcolor{green!30!black}{#1}}}}
+
+\definecolor{keywordcolor}{RGB}{0,0,255}      % Azul para palavras-chave
+\definecolor{commentcolor}{RGB}{0,128,0}      % Verde para comentários
+\definecolor{stringcolor}{RGB}{163,21,21}     % Vermelho escuro para strings
+\definecolor{backgroundcolor}{RGB}{240,240,240}
+
+\lstdefinelanguage{UPPAAL}
+{
+    keywords={var, clock, discrete, bool, constant, parameter, automaton, sync, loc, invariant, when, do, goto, end, init},
+    keywordstyle=\color{keywordcolor}\bfseries,
+    morecomment=[s]{(*}{*)},
+    % morecomment=[l]{(*},
+    % morecomment=[r]{*)},
+    commentstyle=\color{commentcolor}\textit,
+    morestring=[b]",
+    stringstyle=\color{stringcolor},
+    basicstyle=\ttfamily\small,
+    backgroundcolor=\color{backgroundcolor},
+    tabsize=4,
+    showstringspaces=false,
+    breaklines=true
+}
+
+\lstdefinelanguage{MOREUPPAAL}
+{
+    keywords={var, const, int, clock, discrete, bool, constant, parameter, automaton, sync, loc, invariant, when, do, goto, end, init},
+    keywordstyle=\color{keywordcolor}\bfseries,
+    % morecomment=[s]{(//}{//)},
+    morecomment=[l]{//},
+    % morecomment=[l]{(*},
+    % morecomment=[r]{*)},
+    commentstyle=\color{commentcolor}\textit,
+    morestring=[b]",
+    stringstyle=\color{stringcolor},
+    basicstyle=\ttfamily\small,
+    backgroundcolor=\color{backgroundcolor},
+    tabsize=4,
+    showstringspaces=false,
+    breaklines=true
+}
+
+% \includeonly{
+%   chapters/Introduction,
+%   chapters/StateOfTheArt
+%   chapters/PlannedSchedule,
+%   chapters/Imitator_Backend,
+%   chapters/TowardsAUppexInterface,
+%   chapters/ConclusionsAndFutureWork,
+%   appendices/SupportWork,
+% }
+
+\begin{document}
+\setlength{\parindent}{0em}
+
+%-- Covers
+\input{covers/Covers}
+
+%-- Document setup
+\newgeometry{right=25mm, left=25mm, top=25mm, bottom=25mm}
+\pagenumbering{roman}
+
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{1.5em}
+
+% \input{preamble/Copyright}
+% \input{preamble/Acknowledgements}
+% \input{preamble/StatementofIntegrity}
+% \input{preamble/Abstract}
+
+
+\phantomsection
+\tableofcontents
+
+\cleardoublepage
+\listoffigures
+
+% List of tables
+\renewcommand*{\listtablename}{List of Tables}
+\listoftables
+\clearpage
+
+% Acronyms
+\printglossary[type=\acronymtype,nonumberlist, title={Acronyms}]
+
+% Glossary
+\printglossary[title={Glossary}, nonumberlist]
+
+\cleardoublepage
+\pagenumbering{arabic}
+
+%-- Dissertation 
+
+
+\include{chapters/Introduction}
+\include{chapters/StateOfTheArt}
+\include{chapters/PlannedSchedule}
+\include{chapters/Imitator_Backend}
+\include{chapters/TowardsAUppexInterface}
+\include{chapters/ConclusionsAndFutureWork}
+
+
+\renewcommand{\baselinestretch}{1}
+\bibliographystyle{plainnat}
+% \bibliographystyle{alpha}
+\bibliography{dissertation}
+\printindex
+
+\appendix
+\renewcommand\chaptername{Appendix}
+
+%\part{Appendices}
+
+\include{appendices/SupportWork}
+%\input{appendices/DetailsOfResults}
+%\input{appendices/Listings}
+%\input{appendices/Tooling}
+
+\input{covers/BackCover}
+
+\end{document}

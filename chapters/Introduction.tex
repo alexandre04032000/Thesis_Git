@@ -1,0 +1,41 @@
+\chapter{Introduction}
+
+\section{Motivation and context}
+
+%The ``Model-Checking'' is a complex task that consists of automatic qualification of the properties of finite state systems such as elevators or vending machines. This technique applied to real-time systems is a com-task often becoming an intractable problem. One of the limitations of this approach is the large number of states that a system can assume thus leading to a "explosion" of states when  verifying simple properties such as the occurrence of deadlock. Resulting in a verification and in very high computational costs, something unthinkable for the challenges that both companies and engineers have to overcome.
+
+%To solve this problem creates variations of the model simplifying some aspects of this as some requirements that may vary according to the
+%objective of the system. To assist this step and to automate the process we use the tool Uppex~\cite{uppex,uppex-railway}, which through an interface, namely Microsoft Excel, reads the settings chosen by the user. This tool uses the models built in Uppaal as base and returns the optimized model to user specifications also allowing the tool to be a spectrum of use people who do not dominate the area of automata.In addition, the tool is used IMITATOR \cite{citacao3}, which is used in the analysis and verification of real-time systems being an alternative to Uppaal.
+
+%The IMITATOR also has the ability to perform parameter synthesis of real time systems allowing to find system-specific values in order to satisfy the properties desired. This tool is valuable because it allows greater flexibility and optimization of the system.
+Model-checking is a complex task that consists of the automatic verification of properties in finite-state systems, such as elevators or vending machines. When applied to real-time systems, this technique becomes even more challenging and often intractable. One of the main limitations of this approach is the large number of states a system can assume, which leads to the so-called state explosion, even when verifying relatively simple properties such as the occurrence of deadlocks. This phenomenon results in very high computational costs, often impractical in the context of the challenges faced by both companies and engineers.
+
+To address this issue, variations of the original model are created, simplifying certain aspects and adjusting requirements according to the objectives of the system. To support and automate this process, we use the Uppex tool~\cite{uppex,uppex-railway}, which, through an interface based on Microsoft Excel, reads the configurations chosen by the user. The tool relies on models built in Uppaal and returns an optimized model according to the given specifications. In this way, Uppex extends the applicability of formal verification, making it accessible even to professionals who are not experts in automata theory.
+
+In addition, we use the IMITATOR tool~\cite{citacao3}, which is designed for the analysis and verification of real-time systems and serves as an alternative to Uppaal. IMITATOR offers the additional capability of parameter synthesis in real-time systems, enabling the automatic determination of system-specific values that ensure the satisfaction of desired properties. This feature makes the tool particularly valuable, as it provides greater flexibility and allows for further system optimization.
+
+%\section{Contributions}
+
+%This thesis aims to explore the tool IMITATOR, more specifically, to incorporate this as a back-end in the Upper tool, and investigate whether this can be easily manipulated through a front-end such as a spreadsheet of
+%excel. 
+
+%Understanding the syntax of the IMITATOR tool is expected to be one of the first crucial points for this project. The first difficulties faced in the development of the project will be concentrated on the conversion of the automata to the IMITATOR platform. These difficulties
+%are limited only to syntactic disparities, but also cover aspects related to
+%the specific limitations of this tool. The central challenge is to overcome not only the differences in the way automata are represented, but also in adapting and optimizing the use of IMITATOR according to the needs and peculiarities of the project in question. Hence, it is expected to use the capabilities of this tool in conjunction with those of Uppex in order to increase the
+%efficiency of this combination, thus expanding the spectrum of problems that can be addressed in a more comprehensive way.
+
+%Finally, with the manipulation of this tool through a front-end, this will be accessible for use by anyone. This approach aims to democratize access and simplify the user experience, extending the reach of the tool to a wider audience.
+This thesis explored the IMITATOR tool, more specifically by incorporating it as a back-end in the Uppex tool, and investigating whether it could be effectively manipulated through a front-end such as an Excel spreadsheet.
+
+Understanding the syntax of IMITATOR proved to be one of the first crucial steps in the project. The initial challenges encountered during the development were centered on the conversion of automata into the IMITATOR platform. These challenges were not limited to syntactic disparities but also involved issues related to the specific limitations of the tool itself. The central difficulty was to overcome not only the differences in the way automata are represented, but also to adapt and optimize the use of IMITATOR to meet the needs and peculiarities of the project. By addressing these issues, it became possible to combine the capabilities of IMITATOR with those of Uppex, thereby increasing the efficiency of the integration and expanding the range of problems that could be addressed more comprehensively.
+
+Finally, by enabling the manipulation of IMITATOR through a user-friendly front-end, the tool was made accessible to a broader audience. This approach helped democratize access and simplify the user experience, extending the reach of the tool beyond specialists in the field.
+
+
+\section{Organization of this thesis}
+
+This thesis is organized as follows: Chapter 2 provides an introduction to model checkers, with several examples, placing particular emphasis on UPPAAL, as it is the model checker used in the Uppex tool. The formal definition of timed automata is presented, complemented by the formal verification of an example using UPPAAL. Next, an introduction to the IMITATOR model checker is given, which is the main focus of this work. This includes the formal definition of parametric timed automata, as well as a detailed explanation of the limitations of this paradigm and the synthesis algorithms provided by IMITATOR. Finally, the concept of Software Product Lines is introduced, followed by a detailed explanation using an example with the Uppex tool.
+
+In Chapter 3, the syntax of IMITATOR is introduced, followed by three examples: Coffee Machine, Worker and Hammer System and an ATM Machine. The aim is to apply the tool to everyday problems and demonstrate its behavior in systems with varying levels of complexity. For each system, a set of properties is verified, highlighting the capabilities of the tool and the types of verification it enables. This section also serves to familiarize the reader with the output file analysis, as well as to explain the information they contain.
+
+Finally, in Chapter 4, the modifications made to the Uppex tool to support IMITATOR as a backend are detailed. Each subsection corresponds to a major change or improvement implemented throughout the development process. To conclude, the Worker and Hammer System example is applied using the updated version of Uppex, demonstrating its extended functionality and the integration of parametric timed automata verification.
