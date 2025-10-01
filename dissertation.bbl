@@ -1,0 +1,258 @@
+\begin{thebibliography}{30}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[IMI(2022)]{IMITATOR}
+Imitator user manual, 2022.
+\newblock URL \url{www.imitator.fr}.
+\newblock Accessed 2024-01-13.
+
+\bibitem[Abate et~al.(2021)Abate, Gutierrez, Hammond, Harrenstein, Kwiatkowska,
+  Najib, Perelli, Steeples, and Wooldridge]{Abate2021}
+Alessandro Abate, Julian Gutierrez, Lewis Hammond, Paul Harrenstein, Marta
+  Kwiatkowska, Muhammad Najib, Giuseppe Perelli, Thomas Steeples, and Michael
+  Wooldridge.
+\newblock Rational verification: game-theoretic verification of multi-agent
+  systems.
+\newblock \emph{Applied Intelligence}, 51:\penalty0 6569--6584, 9 2021.
+\newblock ISSN 15737497.
+\newblock \doi{10.1007/s10489-021-02658-y}.
+
+\bibitem[Andr\'{e}(2021)]{citacao3}
+\'{E}tienne Andr\'{e}.
+\newblock Imitator 3: Synthesis of timing parameters beyond decidability.
+\newblock In \emph{Computer Aided Verification: 33rd International Conference,
+  CAV 2021, Virtual Event, July 20–23, 2021, Proceedings, Part I}, page
+  552–565, Berlin, Heidelberg, 2021. Springer-Verlag.
+\newblock ISBN 978-3-030-81684-1.
+\newblock \doi{10.1007/978-3-030-81685-8_26}.
+\newblock URL \url{https://doi.org/10.1007/978-3-030-81685-8_26}.
+
+\bibitem[André(2013)]{observers}
+Etienne André.
+\newblock Observer patterns for real-time systems.
+\newblock 2013.
+\newblock \doi{10.1109/ICECCS.2013.26}.
+\newblock URL
+  \url{https://www.loria.science/andre/documents/observer-patterns-for-real-time-systems.pdf}.
+
+\bibitem[André et~al.(2022)André, Lime, and Roux]{andrePTA}
+É. André, Didier Lime, and Olivier~H. Roux.
+\newblock Reachability and liveness in parametric timed automata.
+\newblock \emph{Logical Methods in Computer Science}, 18\penalty0 (1):\penalty0
+  31:1--31:41, 2022.
+\newblock \doi{10.46298/LMCS-18(1:31)2022}.
+\newblock URL \url{https://lmcs.episciences.org/9070/pdf}.
+
+\bibitem[Baier and Katoen(2008{\natexlab{a}})]{Baier2008}
+Christel. Baier and Joost-Pieter. Katoen.
+\newblock \emph{Principles of model checking}.
+\newblock MIT Press, 2008{\natexlab{a}}.
+\newblock ISBN 9780262026499.
+
+\bibitem[Baier and Katoen(2008{\natexlab{b}})]{baier2008principles}
+Christel Baier and Joost-Pieter Katoen.
+\newblock \emph{Principles of Model Checking}.
+\newblock MIT Press, Cambridge, MA, 2008{\natexlab{b}}.
+
+\bibitem[Baukus and Kwiatkowska(2002)]{baukus2002power}
+J.~Baukus and M.~Kwiatkowska.
+\newblock On the power set of clock constraints in timed automata.
+\newblock In \emph{Proceedings of the 14th International Conference on
+  Concurrency Theory (CONCUR 2002)}, pages 348--362. Springer, 2002.
+
+\bibitem[Beckert and Ulbrich(2021)]{spin}
+Bernhard Beckert and Mattias Ulbrich.
+\newblock Applications of formal verification model checking: Introduction to
+  spin.
+\newblock 2021.
+\newblock KIT– INSTITUT F¨UR THEORETISCHE INFORMATIK.
+
+\bibitem[Behrmann et~al.(2006)Behrmann, David, and Larsen]{Behrmann2006}
+Gerd Behrmann, Alexandre David, and Kim~G Larsen.
+\newblock A tutorial on uppaal 4.0.
+\newblock 2006.
+\newblock URL \url{http://www.uppaal.com/.}
+
+\bibitem[Bengtsson and Yi(2004)]{bengtsson2004timed}
+Johan Bengtsson and Wang Yi.
+\newblock Timed automata: Semantics, algorithms and tools.
+\newblock In Wil van~der Aalst and Eike Best, editors, \emph{Lecture Notes on
+  Concurrency and Petri Nets}, volume 3098 of \emph{Lecture Notes in Computer
+  Science}, pages 87--124. Springer, 2004.
+\newblock \doi{10.1007/978-3-540-27755-2_3}.
+\newblock URL \url{https://uppaal.org/texts/by-lncs04.pdf}.
+\newblock Accessed: May 7, 2025.
+
+\bibitem[Chakraborty et~al.(2011)Chakraborty, Library., on~Design~Automation.,
+  for Computing Machinery. Special Interest Group~on Embedded~Systems.,
+  on~Microarchitectural~Research, and Processing.]{Chakraborty2011}
+Samarjit. Chakraborty, ACM~Digital Library., ACM Special Interest~Group
+  on~Design~Automation., Association for Computing Machinery. Special Interest
+  Group~on Embedded~Systems., ACM Special Interest~Group
+  on~Microarchitectural~Research, and Processing.
+\newblock \emph{Proceedings of the ninth ACM international conference on
+  Embedded software.}
+\newblock ACM, 2011.
+\newblock ISBN 9781450307147.
+
+\bibitem[David et~al.(2015)David, Larsen, Legay, Mikučionis, and
+  Poulsen]{citacao6}
+Alexandre David, Kim Larsen, Axel Legay, Marius Mikučionis, and Danny Poulsen.
+\newblock Uppaal smc tutorial.
+\newblock \emph{International Journal on Software Tools for Technology
+  Transfer}, 17, 01 2015.
+\newblock \doi{10.1007/s10009-014-0361-y}.
+
+\bibitem[Haque et~al.(2022)Haque, Eberhart, Bansal, and McMillan]{Haque2022}
+Sakib Haque, Zachary Eberhart, Aakash Bansal, and Collin McMillan.
+\newblock Semantic similarity metrics for evaluating source code summarization.
+\newblock \emph{IEEE International Conference on Program Comprehension},
+  2022-March:\penalty0 36--47, 2022.
+\newblock \doi{10.1145/nnnnnnn.nnnnnnn}.
+
+\bibitem[Kwiatkowska et~al.()Kwiatkowska, Norman, and Parker]{prism}
+Marta Kwiatkowska, Gethin Norman, and David Parker.
+\newblock Probabilistic symbolic model checking with prism: A hybrid approach.
+
+\bibitem[Lee(2009)]{lee2009timed}
+Insup Lee.
+\newblock Timed automata and tctl.
+\newblock
+  \url{https://www.cis.upenn.edu/~lee/09cis480/lec-part-2-ta-tctl-zones-il.pdf},
+  2009.
+\newblock Accessed: May 7, 2025.
+
+\bibitem[Luthmann et~al.(2019)Luthmann, Gerecht, and Lochau]{SPL}
+Lars Luthmann, Timo Gerecht, and Malte Lochau.
+\newblock Sampling strategies for product lines with unbounded parametric
+  real-time constraints.
+\newblock \emph{International Journal on Software Tools for Technology
+  Transfer}, 21\penalty0 (6):\penalty0 613--633, 2019.
+\newblock \doi{10.1007/s10009-019-00532-4}.
+
+\bibitem[Peled(2001)]{Peled2001}
+Doron Peled.
+\newblock Model checking.
+\newblock 2001.
+\newblock URL \url{https://www.researchgate.net/publication/220689159}.
+
+\bibitem[Pohl and Metzger(2018)]{Pohl2018}
+Klaus Pohl and Andreas Metzger.
+\newblock \emph{Software Product Lines}, pages 185--201.
+\newblock Springer International Publishing, 2018.
+\newblock \doi{10.1007/978-3-319-73897-0_11}.
+
+\bibitem[Proen{\c{c}}a et~al.(2023{\natexlab{a}})Proen{\c{c}}a, Pereira, Nandi,
+  Borrami, and Melchert]{proenca-spreadsheet-2023}
+Jos{\'{e}} Proen{\c{c}}a, David Pereira, Giann~Spilere Nandi, Sina Borrami, and
+  Jonas Melchert.
+\newblock Spreadsheet-based configuration of families of real-time
+  specifications.
+\newblock In Maurice~H. ter Beek and Clemens Dubslaff, editors,
+  \emph{Proceedings of the First Workshop on Trends in Configurable Systems
+  Analysis, TiCSA@ETAPS 2023, Paris, France, 23rd April 2023}, volume 392 of
+  \emph{{EPTCS}}, pages 27--39, 2023{\natexlab{a}}.
+\newblock \doi{10.4204/EPTCS.392.2}.
+\newblock URL \url{https://doi.org/10.4204/EPTCS.392.2}.
+
+\bibitem[Proen{\c{c}}a et~al.(2023{\natexlab{b}})Proen{\c{c}}a, Pereira, Nandi,
+  Borrami, and Melchert]{uppex}
+Jos{\'{e}} Proen{\c{c}}a, David Pereira, Giann~Spilere Nandi, Sina Borrami, and
+  Jonas Melchert.
+\newblock Spreadsheet-based configuration of families of real-time
+  specifications.
+\newblock In Maurice~H. ter Beek and Clemens Dubslaff, editors,
+  \emph{Proceedings of the First Workshop on Trends in Configurable Systems
+  Analysis, TiCSA@ETAPS 2023, Paris, France, 23rd April 2023}, volume 392 of
+  \emph{{EPTCS}}, pages 27--39, 2023{\natexlab{b}}.
+\newblock \doi{10.4204/EPTCS.392.2}.
+\newblock URL \url{https://doi.org/10.4204/EPTCS.392.2}.
+
+\bibitem[Proenza(2008)]{upp}
+Julián Proenza.
+\newblock The uppaal model checker.
+\newblock Microsoft PowerPoint, 2008.
+\newblock URL
+  \url{https://fuuu.be/polytech/INFOF410/infof410_goat/doc/TheUppaalModelCheckerNEW.pdf}.
+\newblock [PowerPoint Slides].
+
+\bibitem[Proença and Neves(2022)]{proenca_slides}
+José Proença and Renato Neves.
+\newblock Real-time models: Timed automata.
+\newblock Microsoft PowerPoint, 2022.
+\newblock URL
+  \url{https://lmf.di.uminho.pt/CyPhyComp2223/slides/3-timed-automata.pdf}.
+\newblock [PowerPoint Slides].
+
+\bibitem[Proença et~al.(2022{\natexlab{a}})Proença, Borrami, de~Nova,
+  Pereira, and Nandi]{proenca_uppex}
+José Proença, Sina Borrami, Jorge~Sanchez de~Nova, David Pereira, and Giann
+  Nandi.
+\newblock Verification of multiple models of a safetycritical motor controller
+  in railway systems.
+\newblock 2022{\natexlab{a}}.
+\newblock URL
+  \url{http://www.cister.isep.ipp.pt/docs/verificattion_of_multiple_models_of_a_safety_critical_motor_controller_in_railway_systems/1865/view.pdf}.
+
+\bibitem[Proença et~al.(2022{\natexlab{b}})Proença, Borrami, de~Nova,
+  Pereira, and Nandi]{uppex-railway}
+José Proença, Sina Borrami, Jorge~Sanchez de~Nova, David Pereira, and
+  Giann~Spilere Nandi.
+\newblock Verification of multiple models of a safety-critical motor controller
+  in railway systems.
+\newblock In Simon~Collart Dutilleul, Anne~E. Haxthausen, and Thierry Lecomte,
+  editors, \emph{Reliability, Safety, and Security of Railway Systems.
+  Modelling, Analysis, Verification, and Certification - 4th International
+  Conference, RSSRail 2022, Paris, France, June 1-2, 2022, Proceedings}, volume
+  13294 of \emph{Lecture Notes in Computer Science}, pages 83--94. Springer,
+  2022{\natexlab{b}}.
+\newblock \doi{10.1007/978-3-031-05814-1\_6}.
+\newblock URL \url{https://doi.org/10.1007/978-3-031-05814-1\_6}.
+
+\bibitem[Sun et~al.(2016)Sun, André, and Lipari]{RealTimeSystems}
+Youcheng Sun, Étienne André, and Giuseppe Lipari.
+\newblock Verification of two real-time systems using parametric timed
+  automata.
+\newblock 2016.
+\newblock
+  \doi{https://www.loria.science/andre/documents/verification-of-two-real-time-systems-using-parametric-timed-automata.pdf}.
+
+\bibitem[TechTarget(2025)]{techtarget_parser}
+TechTarget.
+\newblock Parser, 2025.
+\newblock URL
+  \url{https://www.techtarget.com/searchapparchitecture/definition/parser}.
+\newblock Accessed: 2025-03-21.
+
+\bibitem[Étienne(2021)]{imitator_slides}
+André Étienne.
+\newblock Imitator3 : Synthesis of timing parameters beyond decidability.
+\newblock Microsoft PowerPoint, 2021.
+\newblock URL
+  \url{https://lipn.univ-paris13.fr/~andre/documents/slides-2021-07-CAV-long.pdf}.
+\newblock [PowerPoint Slides].
+
+\bibitem[Étienne André(2019)]{andre2019whats}
+Étienne André.
+\newblock What's decidable about parametric timed automata?
+\newblock \emph{International Journal on Software Tools for Technology
+  Transfer}, 21\penalty0 (2):\penalty0 203--219, 2019.
+\newblock \doi{10.1007/s10009-017-0467-0}.
+\newblock URL
+  \url{https://lipn.univ-paris13.fr/~andre/documents/what-s-decidable-about-parametric-timed-automata.pdf}.
+\newblock Accessed: May 7, 2025.
+
+\bibitem[Étienne André(2021)]{Andre2021}
+Étienne André.
+\newblock Imitator 3: Synthesis of timing parameters beyond decidability.
+\newblock In Alexandra Silva and K.~Rustan~M. Leino, editors, \emph{Computer
+  Aided Verification}, pages 552--565, Cham, 2021. Springer International
+  Publishing.
+\newblock ISBN 978-3-030-81685-8.
+\newblock \doi{10.1007/978-3-030-81685-8_26}.
+
+\end{thebibliography}

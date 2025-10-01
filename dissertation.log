@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Alpine Linux) (preloaded format=xelatex 2025.9.20)  20 SEP 2025 16:02
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Alpine Linux) (preloaded format=xelatex 2025.9.20)  26 SEP 2025 17:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1956,229 +1956,210 @@ File: chapters/spin.png Graphic file (type bmp)
 <chapters/spin.png>
 
 
-Package natbib Warning: Citation `spin' on page 5 undefined on input line 80.
+Package natbib Warning: Citation `spin' on page 5 undefined on input line 81.
 
 
-Package natbib Warning: Citation `spin' on page 5 undefined on input line 80.
+Package natbib Warning: Citation `spin' on page 5 undefined on input line 81.
 
 
-Package natbib Warning: Citation `prism' on page 5 undefined on input line 88.
+Package natbib Warning: Citation `prism' on page 5 undefined on input line 89.
 
 
 Package natbib Warning: Citation `citacao6' on page 5 undefined on input line 8
-8.
+9.
 
 File: chapters/Prism.png Graphic file (type bmp)
 <chapters/Prism.png>
 
-Package natbib Warning: Citation `prism' on page 5 undefined on input line 93.
+Package natbib Warning: Citation `prism' on page 5 undefined on input line 94.
 
 
-Package natbib Warning: Citation `prism' on page 5 undefined on input line 93.
+Package natbib Warning: Citation `prism' on page 5 undefined on input line 94.
 
 [5]
 
 Package natbib Warning: Citation `Peled2001' on page 6 undefined on input line 
-102.
+103.
 
 
 Package natbib Warning: Citation `Haque2022' on page 6 undefined on input line 
-105.
+106.
 
 
 Package natbib Warning: Citation `Haque2022' on page 6 undefined on input line 
-107.
+108.
 
 
 Package natbib Warning: Citation `Chakraborty2011' on page 6 undefined on input
- line 110.
+ line 111.
 
 
 Package natbib Warning: Citation `Behrmann2006' on page 6 undefined on input li
-ne 116.
+ne 117.
 
 
 Package natbib Warning: Citation `baier2008principles' on page 6 undefined on i
-nput line 120.
+nput line 121.
 
 [6]
 
 Package natbib Warning: Citation `baukus2002power' on page 7 undefined on input
- line 150.
+ line 139.
+
+
+Package natbib Warning: Citation `baier2008principles' on page 7 undefined on i
+nput line 154.
+
+
+Package natbib Warning: Citation `baier2008principles' on page 7 undefined on i
+nput line 159.
 
 [7]
 
 Package natbib Warning: Citation `baier2008principles' on page 8 undefined on i
-nput line 165.
+nput line 212.
 
 
 Package natbib Warning: Citation `baier2008principles' on page 8 undefined on i
-nput line 170.
+nput line 225.
 
 
 Package natbib Warning: Citation `baier2008principles' on page 8 undefined on i
-nput line 176.
+nput line 235.
 
 
 Package natbib Warning: Citation `baier2008principles' on page 8 undefined on i
-nput line 189.
-
-
-Package natbib Warning: Citation `baier2008principles' on page 8 undefined on i
-nput line 199.
-
-
-Package natbib Warning: Citation `baier2008principles' on page 8 undefined on i
-nput line 206.
+nput line 242.
 
 [8]
 
 Package natbib Warning: Citation `baier2008principles' on page 9 undefined on i
-nput line 223.
+nput line 259.
 
 
 Package natbib Warning: Citation `proenca-spreadsheet-2023' on page 9 undefined
- on input line 241.
+ on input line 279.
 
 
 Package natbib Warning: Citation `Behrmann2006' on page 9 undefined on input li
-ne 244.
+ne 279.
 
 
-Package natbib Warning: Citation `Behrmann2006' on page 9 undefined on input li
-ne 246.
-
-
-Package natbib Warning: Citation `Behrmann2006' on page 9 undefined on input li
-ne 250.
-
-
-Package natbib Warning: Citation `upp' on page 9 undefined on input line 253.
+Package natbib Warning: Citation `upp' on page 9 undefined on input line 279.
 
 File: chapters/worker_hammer.png Graphic file (type bmp)
 <chapters/worker_hammer.png>
 [9] [10]
 
 Package natbib Warning: Citation `lee2009timed' on page 11 undefined on input l
-ine 300.
+ine 338.
 
 
 Package natbib Warning: Citation `lee2009timed' on page 11 undefined on input l
-ine 300.
+ine 338.
 
 
 Package natbib Warning: Citation `bengtsson2004timed' on page 11 undefined on i
-nput line 302.
-
-
-Package natbib Warning: Citation `IMITATOR' on page 11 undefined on input line 
-351.
-
-
-Package natbib Warning: Citation `RealTimeSystems' on page 11 undefined on inpu
-t line 351.
-
-
-Package natbib Warning: Citation `SPL' on page 11 undefined on input line 352.
+nput line 338.
 
 [11]
 
 Package natbib Warning: Citation `IMITATOR' on page 12 undefined on input line 
-355.
+386.
+
+
+Package natbib Warning: Citation `RealTimeSystems' on page 12 undefined on inpu
+t line 386.
+
+
+Package natbib Warning: Citation `SPL' on page 12 undefined on input line 387.
+
+
+Package natbib Warning: Citation `IMITATOR' on page 12 undefined on input line 
+390.
 
 
 Package natbib Warning: Citation `andrePTA' on page 12 undefined on input line 
-359.
+394.
 
 [12]
 
 Package natbib Warning: Citation `baukus2002power' on page 13 undefined on inpu
-t line 390.
+t line 425.
 
+[13]
 
-Package natbib Warning: Citation `proenca_slides' on page 13 undefined on input
- line 410.
+Package natbib Warning: Citation `proenca_slides' on page 14 undefined on input
+ line 445.
 
-[13] [14]
-
-Package natbib Warning: Citation `Andre2021' on page 15 undefined on input line
- 482.
-
+[14]
 
 Package natbib Warning: Citation `Andre2021' on page 15 undefined on input line
- 482.
+ 517.
+
+
+Package natbib Warning: Citation `Andre2021' on page 15 undefined on input line
+ 517.
 
 [15]
 
 Package natbib Warning: Citation `andre2019whats' on page 16 undefined on input
- line 518.
+ line 553.
 
 
 Package natbib Warning: Citation `andre2019whats' on page 16 undefined on input
- line 518.
+ line 553.
 
 
 Package natbib Warning: Citation `andre2019whats' on page 16 undefined on input
- line 518.
+ line 553.
 
 
 Package natbib Warning: Citation `andre2019whats' on page 16 undefined on input
- line 518.
+ line 553.
 
 
 Package natbib Warning: Citation `IMITATOR' on page 16 undefined on input line 
-657.
+692.
 
 [16]
 
 Package natbib Warning: Citation `imitator_slides' on page 17 undefined on inpu
-t line 670.
+t line 705.
 
 
 Package natbib Warning: Citation `IMITATOR' on page 17 undefined on input line 
-692.
-
-
-Package natbib Warning: Citation `IMITATOR' on page 17 undefined on input line 
-707.
-
-
-Package natbib Warning: Citation `IMITATOR' on page 17 undefined on input line 
-707.
+727.
 
 [17]
 
 Package natbib Warning: Citation `IMITATOR' on page 18 undefined on input line 
-735.
+741.
+
+
+Package natbib Warning: Citation `IMITATOR' on page 18 undefined on input line 
+741.
+
+
+Package natbib Warning: Citation `IMITATOR' on page 18 undefined on input line 
+769.
 
 
 Package natbib Warning: Citation `observers' on page 18 undefined on input line
- 737.
-
-
-Package natbib Warning: Citation `uppex' on page 18 undefined on input line 745
-.
-
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 745.
-
-Overfull \hbox (8.58128pt too wide) in paragraph at lines 745--745
-[][][]\TU/NewsGotT.ttf(1)/m/n/12 missing 
- []
-
-
-Overfull \hbox (8.58128pt too wide) in paragraph at lines 745--745
-[][][]\TU/NewsGotT.ttf(1)/m/n/12 missing 
- []
+ 771.
 
 [18]
 
-Package natbib Warning: Citation `Pohl2018' on page 19 undefined on input line 
-753.
+Package natbib Warning: Citation `uppex' on page 19 undefined on input line 779
+.
 
 
 Package natbib Warning: Citation `Pohl2018' on page 19 undefined on input line 
-757.
+787.
+
+
+Package natbib Warning: Citation `Pohl2018' on page 19 undefined on input line 
+791.
 
 [19]
 File: images/uppex_flow.png Graphic file (type bmp)
@@ -2186,29 +2167,32 @@ File: images/uppex_flow.png Graphic file (type bmp)
 
 
 Package natbib Warning: Citation `proenca_uppex' on page 20 undefined on input 
-line 780.
+line 812.
 
 
 Package natbib Warning: Citation `proenca_uppex' on page 20 undefined on input 
-line 780.
+line 812.
 
+[20]
 File: chapters/uppex.png Graphic file (type bmp)
 <chapters/uppex.png>
-[20]
 File: images/upe_WH.png Graphic file (type bmp)
 <images/upe_WH.png>
+ [21]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 820.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 853.
 
-Overfull \hbox (864.96103pt too wide) in paragraph at lines 817--832
+Overfull \hbox (864.96103pt too wide) in paragraph at lines 850--865
  []$[]$ 
  []
 
-[21] [22] [23]) [24]
+[22] [23]) [24]
 \openout2 = `chapters/PlannedSchedule.aux'.
 
  (./chapters/PlannedSchedule.tex
 Chapter 3.
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 7.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 21.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
@@ -2226,7 +2210,7 @@ Package natbib Warning: Citation `IMITATOR' on page 27 undefined on input line
 [27]
 
 Package natbib Warning: Citation `IMITATOR' on page 28 undefined on input line 
-110.
+106.
 
 [28]
 File: chapters/vecteezy_coffee-espresso-machine-lover-single-isolated-hand-draw
@@ -2236,53 +2220,53 @@ n_8148187.jpg Graphic file (type bmp)
 
 
 Package natbib Warning: Citation `Abate2021' on page 29 undefined on input line
- 332.
+ 328.
 
 
 Package natbib Warning: Citation `Abate2021' on page 29 undefined on input line
- 332.
+ 328.
 
 [29]
 
 LaTeX Font Warning: Font shape `TU/NewsGotT.ttf(1)/b/it' undefined
-(Font)              using `TU/NewsGotT.ttf(1)/b/n' instead on input line 375.
+(Font)              using `TU/NewsGotT.ttf(1)/b/n' instead on input line 371.
 
 [30]
 
 Package natbib Warning: Citation `IMITATOR' on page 31 undefined on input line 
-381.
+373.
 
 [31]
 File: images/sys.png Graphic file (type bmp)
 <images/sys.png>
  [32]
-Overfull \hbox (11.66893pt too wide) in paragraph at lines 473--475
+Overfull \hbox (11.66893pt too wide) in paragraph at lines 463--465
 []\TU/NewsGotT.ttf(1)/m/n/12 To achieve this, we can use the following property
 : \TU/lmtt/m/n/12 property := #synth EFpmin(loc[machine]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 506--506
+Underfull \hbox (badness 10000) in paragraph at lines 496--496
 []|\TU/lmtt/m/n/12 property := synth
  []
 
 
-Overfull \hbox (85.35826pt too wide) in paragraph at lines 506--506
+Overfull \hbox (85.35826pt too wide) in paragraph at lines 496--496
 []|[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 506--506
+Underfull \hbox (badness 10000) in paragraph at lines 496--496
 []|\TU/lmtt/m/n/12 property := #synth
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 506--506
+Underfull \hbox (badness 10000) in paragraph at lines 496--496
 \TU/lmtt/m/n/12 EFpmin(loc[machine] =
  []
 
 
-Overfull \hbox (85.35826pt too wide) in paragraph at lines 506--506
+Overfull \hbox (85.35826pt too wide) in paragraph at lines 496--496
 []|[]| 
  []
 
@@ -2293,74 +2277,74 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: images/WH-PTA.png Graphic file (type bmp)
 <images/WH-PTA.png>
  [37]
-Underfull \hbox (badness 10000) in paragraph at lines 695--695
+Underfull \hbox (badness 10000) in paragraph at lines 677--677
 []|\TU/lmtt/m/n/12 property := synth
  []
 
 
-Overfull \hbox (85.35826pt too wide) in paragraph at lines 695--695
+Overfull \hbox (85.35826pt too wide) in paragraph at lines 677--677
 []|[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 695--695
+Underfull \hbox (badness 10000) in paragraph at lines 677--677
 []|\TU/lmtt/m/n/12 property := #synth
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 695--695
+Underfull \hbox (badness 10000) in paragraph at lines 677--677
 \TU/lmtt/m/n/12 EF(loc[Hammer] =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 695--695
+Underfull \hbox (badness 10000) in paragraph at lines 677--677
 
  []
 
 
-Overfull \hbox (85.35826pt too wide) in paragraph at lines 695--695
+Overfull \hbox (85.35826pt too wide) in paragraph at lines 677--677
 []|[]| 
  []
 
 
 Package natbib Warning: Citation `IMITATOR' on page 38 undefined on input line 
-703.
+685.
 
 [38] [39] [40]
 File: images/fixed.png Graphic file (type bmp)
 <images/fixed.png>
  [41]
-Underfull \hbox (badness 10000) in paragraph at lines 866--866
+Underfull \hbox (badness 10000) in paragraph at lines 835--835
 []|\TU/lmtt/m/n/12 property := #synth
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 866--866
+Underfull \hbox (badness 10000) in paragraph at lines 835--835
 
  []
 
 
-Overfull \hbox (170.71654pt too wide) in paragraph at lines 866--866
+Overfull \hbox (170.71654pt too wide) in paragraph at lines 835--835
 []|[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 866--866
+Underfull \hbox (badness 10000) in paragraph at lines 835--835
 []|\TU/lmtt/m/n/12 property := #synth
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 866--866
+Underfull \hbox (badness 10000) in paragraph at lines 835--835
 \TU/lmtt/m/n/12 CycleThrough(loc[pta] =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 866--866
+Underfull \hbox (badness 10000) in paragraph at lines 835--835
 
  []
 
 
-Overfull \hbox (56.90552pt too wide) in paragraph at lines 866--866
+Overfull \hbox (56.90552pt too wide) in paragraph at lines 835--835
 []|[]| 
  []
 
@@ -2657,12 +2641,12 @@ Package rerunfilecheck Info: File `dissertation.out' has not changed.
 (rerunfilecheck)             Checksum: 1BD314C51859CA9A3C36493209CF14DD;5852.
  ) 
 Here is how much of TeX's memory you used:
- 55645 strings out of 476683
- 1246354 string characters out of 5809779
- 1958018 words of memory out of 5000000
- 74897 multiletter control sequences out of 15000+600000
+ 55637 strings out of 476683
+ 1246169 string characters out of 5809779
+ 1957018 words of memory out of 5000000
+ 74889 multiletter control sequences out of 15000+600000
  519920 words of font info for 94 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 106i,16n,108p,2302b,1904s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 106i,16n,108p,2302b,1934s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on dissertation.pdf (90 pages).

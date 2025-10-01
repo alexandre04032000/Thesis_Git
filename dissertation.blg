@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Alpine Linux)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: dissertation.aux
+A level-1 auxiliary file: chapters/Introduction.aux
+A level-1 auxiliary file: chapters/StateOfTheArt.aux
+A level-1 auxiliary file: chapters/PlannedSchedule.aux
+A level-1 auxiliary file: chapters/Imitator_Backend.aux
+A level-1 auxiliary file: chapters/TowardsAUppexInterface.aux
+A level-1 auxiliary file: chapters/ConclusionsAndFutureWork.aux
+The style file: plainnat.bst
+A level-1 auxiliary file: appendices/SupportWork.aux
+Database file #1: dissertation.bib
+Warning--to sort, need author or key in IMITATOR
+Warning--empty journal in observers
+Warning--empty journal in spin
+Warning--empty journal in Behrmann2006
+Warning--empty journal in prism
+Warning--empty year in prism
+Warning--empty year in prism
+Warning--empty journal in Peled2001
+Warning--empty journal in proenca_uppex
+Warning--empty journal in RealTimeSystems
+You've used 30 entries,
+            2773 wiz_defined-function locations,
+            803 strings with 11300 characters,
+and the built_in function-call counts, 14738 in all, are:
+= -- 1348
+> -- 850
+< -- 28
++ -- 290
+- -- 257
+* -- 1160
+:= -- 2256
+add.period$ -- 136
+call.type$ -- 30
+change.case$ -- 168
+chr.to.int$ -- 27
+cite$ -- 71
+duplicate$ -- 676
+empty$ -- 1156
+format.name$ -- 300
+if$ -- 3142
+int.to.chr$ -- 4
+int.to.str$ -- 1
+missing$ -- 28
+newline$ -- 199
+num.names$ -- 126
+pop$ -- 373
+preamble$ -- 1
+purify$ -- 142
+quote$ -- 0
+skip$ -- 535
+stack$ -- 0
+substring$ -- 396
+swap$ -- 117
+text.length$ -- 12
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 310
+warning$ -- 10
+while$ -- 121
+width$ -- 0
+write$ -- 468
+(There were 10 warnings)

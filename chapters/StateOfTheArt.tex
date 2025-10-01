@@ -66,13 +66,14 @@ As presented in the picture, one has a set of requirements that need to be satis
 
 %Once the transition system and temporal logic properties are defined, all that is needed is a model checker to assess whether the specified properties hold within the system.
 
-There are plenty of model checkers available and, the main difference between them is the algorithm (for optimization purposes). To start this project, some examples of other models Checkers will be described, but the main focus will be on \textbf{Imitator} and \textbf{Uppaal} because, as previously mentioned, it is in these two programs that the systems in Uppex will be shaped. 
+There are many model checkers available, and what mainly distinguishes them is the algorithm they use, since each one adopts different optimization strategies, that is, they all solve the same verification problem but rely on different techniques(add here ref). To start this project, we present different examples of models checkers with\textbf{Imitator} and \textbf{Uppaal} on the spotlight as previously mentioned. It is within these two programs that the systems in Uppex will be modeled and analyzed.
 
 \subsection*{SPIN}
 
- SPIN is an LTL model checker commonly used for modeling concurrent software and asynchronous processes, particularly in communication protocols. It utilizes Promela as the modeling language to construct the model system. After we create our model, it offers the option to simulate the model randomly, interactively, or in a guided manner. ~\cite{spin}.
+ SPIN is an LTL model checker commonly used for modeling concurrent software and asynchronous processes, particularly communication protocols. It utilizes Promela as the modeling language. After we create our model, it offers the option to simulate the model randomly, interactively, or in a guided manner. Additionally, SPIN can create a C program that automatically performs exhaustive model checking ~\cite{spin}.
 
-In essence, the process involves the creation of a model system using Promela, which is then subjected to a verification by SPIN. SPIN can either simulate the model through various approaches or generate a C-based verifier. The verifier conducts exhaustive model checking, identifying violations of specified properties, such as safety and correctness. This methodology proves particularly valuable in scenarios where correctness and security are critical considerations, as is often the case in communication protocol applications (Figure~\ref{fig:Spin}).
+%In essence, the process involves the creation of a model system using Promela, which is then subjected to a verification by SPIN. SPIN can either simulate the model through various approaches or generate a C-based verifier. 
+The verifier conducts exhaustive model checking, identifying violations of specified properties, such as safety and correctness. This methodology proves particularly valuable in scenarios where correctness and security are critical considerations, as is often the case in communication protocol applications (Figure~\ref{fig:Spin}).
 
 \begin{figure} [H]
     \centering
@@ -85,7 +86,7 @@ In essence, the process involves the creation of a model system using Promela, w
 
 \subsection*{Prism}
 
-Prism is a Probabistic Model Checking tool that deals with systems that exhibit probabilistic behavior. Probabilistic model checking refers to a range of techniques for calculating the likelihood of the occurrence of certain events during the execution of systems which exhibit such behaviour~\cite{prism}. As a input, Prism takes a probabilistic model, including \emph{Continuous-time Markov chains} and \emph{Probabilistic timed automata}, and a probabilistic temporal logic \cite{citacao6}. This is summarized in Figure~\ref{fig:prism}.
+Prism is a Probabistic Model Checking tool that deals with systems that exhibit probabilistic behavior. Probabilistic model checking refers to a range of techniques for calculating the likelihood of the occurrence of certain events during the execution of systems ~\cite{prism}. As a input, Prism takes a probabilistic model, including \emph{Continuous-time Markov chains} and \emph{Probabilistic timed automata}, and a probabilistic temporal logic \cite{citacao6}. This is summarized in Figure~\ref{fig:prism}.
 
 \begin{figure} [H]
     \centering
@@ -99,7 +100,7 @@ Prism is a Probabistic Model Checking tool that deals with systems that exhibit 
 \subsection*{Simulink}
 
 Simulink is a Matlab extension %which is a development and simulation language
-that is widely used to \emph{model} and \emph{simulate} dynamical systems~\cite{Peled2001}. It is particularly suitable for specifying mathematical models of real time systems. Simulink has two different approachesto ensure that failures are identified as early as possible.
+that is widely used to \emph{model} and \emph{simulate} dynamical systems~\cite{Peled2001}. It is particularly suitable for specifying mathematical models of real time systems. Simulink has two different approaches to ensure that failures are identified as early as possible.
 
 \begin{itemize}
     \item \textbf{Model testing} attempts to identify failures in models by executing them for some test inputs sampled by a guided randomized algorithm~\cite{Haque2022}.
@@ -107,7 +108,7 @@ that is widely used to \emph{model} and \emph{simulate} dynamical systems~\cite{
     \item \textbf{Model checking} attempts to exhaustively verify the correctness of models against some given formal properties~\cite{Haque2022}.
 \end{itemize}
 
-In the case of Model checking, the inputs (system and property) are translated and used as inputs in some model checker or Satisfiability Modulo Theories (SMT) solvers. Since Simulink models often represent continuous dynamic and hybrid systems, applying model checking to such models typically has solutions that are undecidable~\cite{Chakraborty2011}.
+In the case of Model checking, the inputs (system and property) are translated and used as inputs in some model checker or Satisfiability Modulo Theories (SMT) solvers. Since Simulink models often represent continuous dynamic and hybrid systems, applying model checking to such models typically leads to undecidable~\cite{Chakraborty2011}.
 
 %colocar o uppaal e imitator
 
@@ -117,7 +118,7 @@ As mentioned previously, Uppaal is a model checking tool for verification of rea
 
 \subsubsection{Timed Automata}
 
-A \textit{Timed Automaton} (TA) is a extends the concept of a Finite Automata with clocks that are used to handle time in the system. Time is continuous and the clocks measure time progress which will increase globally at the same pace for the whole system. It is formally defined as a 6-tuple \cite{baier2008principles}:
+A \textit{Timed Automaton} (TA) extends the concept of a Finite Automaton with clocks that are used to handle time in the system. Time is continuous and the clocks measure time progress which will increase globally at the same pace for the whole system. It is formally defined as a 6-tuple \cite{baier2008principles}:
 
 
 
@@ -130,22 +131,10 @@ Where:
     \item \( L \) is the set of \textbf{locations} (or states).
     \item \( L_0 \subseteq L \) is the subset of \textbf{initial locations}.
     \item \( Act \) is the set of \textbf{actions}, and \( C \) is the set of \textbf{clocks}.
-    \item \( Tr \subseteq L \times \mathcal{C}(C) \times Act \times \mathcal{P}(C) \times L \) defines the \textbf{transition relation}, i.e., the rules that determine how the system evolves.
+    %\item \( Tr \subseteq L \times \mathcal{C} \times Act \times \mathcal{P}(C) \times L \) defines the \textbf{transition relation}, i.e., the rules that determine how the system evolves.
 \end{itemize}
 
-The transition notation:
-
-\[
-\ell_1 \xrightarrow{g, a, U} \ell_2
-\]
-
-Means that:
-\begin{itemize}
-    \item The system can transition from location \( \ell_1 \) to \( \ell_2 \).
-    \item This transition occurs if the \textbf{guard} \( g \) is valid.
-    \item The transition is labeled by an \textbf{action} \( a \).
-    \item When the transition occurs, the set of \textbf{clocks} \( U \) is reset.
-\end{itemize}
+Before defining transitions, it is crucial to introduce the concept of a reset. In a timed automaton, the value of a clock can be reset during transitions.
 
 The power set \( P(C) \) represents all possible subsets of the clocks \( C \) that could be reset during a transition ~\cite{baukus2002power}. For example, if \( C = \{x, y\} \), then the power set of \( C \) is:
 
@@ -169,8 +158,55 @@ g ::= x \ \square \ n \mid x - y \ \square \ n \mid g \land g \mid \text{true}
 \]
 where \( x, y \in C \), \( n \in \mathbb{N} \), and \( \square \in \{ <, \leq, >, \geq, = \} \). These will be used in \textbf{guards} (on the transitions) or in \textbf{invariants} (on the locations). It is worth noting that invariants are the only way to enforce a transition \cite{baier2008principles}. 
 
+We can also define the Invariant Function ($Inv$) as follows:
 
-Timed Labelled Transition Systems (TLTS) models the execution of TA through labeled transition systems, incorporating delay transitions to capture the passage of time.
+\begin{itemize}
+    \item $Inv: L \rightarrow \mathcal{C}(C)$ is the \textbf{invariant function} that assigns a clock constraint to each location $\ell \in L$.
+\end{itemize}
+
+With this concepts in place, we can now complete the formal notation for transitions:
+
+\begin{itemize}
+    \item \( Tr \subseteq L \times \mathcal{C} \times Act \times \mathcal{P}(C) \times L \) defines the \textbf{transition relation}, i.e., the rules that determine how the system evolves.
+\end{itemize}
+
+
+The transition notation:
+\[
+\ell_1 \xrightarrow{g, a, U} \ell_2
+\]
+
+means that:
+\begin{itemize}
+    \item The system can transition from location \( \ell_1 \) to \( \ell_2 \) if the \textbf{guard} \( g \) is valid.
+    \item The transition is labeled by an \textbf{action} \( a \).
+    \item When the transition occurs, the \textbf{clocks} in set \( U \) are reseted.
+\end{itemize}
+
+%The power set \( P(C) \) represents all possible subsets of the clocks \( C \) that could be reset during a transition ~\cite{baukus2002power}. For example, if \( C = \{x, y\} \), then the power set of \( C \) is:
+
+%\[
+%P(C) = \{\emptyset, \{x\}, \{y\}, \{x, y\}\}
+%\]
+
+%This describes the four possible ways clocks can be reset:
+
+%\begin{itemize}
+%    \item \( \emptyset \): No clocks are reset.
+%    \item \( \{x\} \): Only clock \( x \) is reset.
+%    \item \( \{y\} \): Only clock \( y \) is reset.
+%    \item \( \{x, y\} \): Both clocks \( x \) and \( y \) are reset.
+%\end{itemize} 
+
+%The notation \( \mathcal{C}(C) \) denotes the set of clock constraints over a set \( C \) of clock variables. Each constraint is formed according to \cite{baier2008principles}:
+
+%\[
+%g ::= x \ \square \ n \mid x - y \ \square \ n \mid g \land g \mid \text{true}
+%\]
+%where \( x, y \in C \), \( n \in \mathbb{N} \), and \( \square \in \{ <, \leq, >, \geq, = \} \). These will be used in \textbf{guards} (on the transitions) or in \textbf{invariants} (on the locations). It is worth noting that invariants are the only way to enforce a transition \cite{baier2008principles}. 
+
+
+Timed Labelled Transition Systems (TLTS) models the execution of TA through labeled transition systems, incorporating so-called delay transitions to capture the passage of time.
 
 
 A TLTS is a model that introduces two types of transitions \cite{baier2008principles}: 
@@ -220,7 +256,7 @@ Clocks are valuation functions \( \eta: C \to \mathbb{R}^+_0 \), mapping each cl
     \]
 \end{itemize}
 
-The conversion of a Timed Automaton to a TLTS \( T(ta) = \langle S, S_0, N, T \rangle \) occurs as follows \cite{baier2008principles}:
+More specifically the conversion of a Timed Automaton to a TLTS \( T(ta) = \langle S, S_0, N, T \rangle \) occurs as follows \cite{baier2008principles}:
 
 \begin{itemize}
     \item \( S \) is the set of states;
@@ -230,7 +266,7 @@ The conversion of a Timed Automaton to a TLTS \( T(ta) = \langle S, S_0, N, T \r
     \[
         \langle l, \eta \rangle \xrightarrow{a} \langle l', \eta' \rangle \quad \text{if there is a valid transition in } Tr.
     \]
-    The delay transition occurs as long as the state constraints are maintained.
+    The delay transition occurs as long as the state invariants are maintained.
 \end{itemize}
 
 
@@ -238,19 +274,21 @@ The conversion of a Timed Automaton to a TLTS \( T(ta) = \langle S, S_0, N, T \r
 
 \subsubsection*{Modelling in Uppaal}
 
-A system in Uppaal is modeled as a network of TA in parallel \cite{proenca-spreadsheet-2023}. Each automata is composed by a set of a locations, transistions are used to 'travel' throw all locations and to control those it is possible to use guards, invariant and a synchronization.
+%A system in Uppaal is modeled as a network of TA in parallel \cite{proenca-spreadsheet-2023}. Each automaton is composed by a set of a locations, transistions are used to 'travel' throw all locations and to control those it is possible to use guards, invariant and a synchronization, as we saw before
 
-\begin{itemize}
-    \item \textbf{Guard} A guard is a condition applied to the variables and the clocks. If is the condition is True the transistion is enable, otherwise cannot occur~\cite{Behrmann2006}.
+A system in Uppaal is formally modeled as a network of Timed Automata (TA) that operate in parallel through a composition approach \cite{proenca-spreadsheet-2023}. This network consists of multiple interacting TA processes, where each automaton contains locations (discrete states) and transitions that enable movement between these locations. The behavior is controlled through clock constraints expressed as guards on transitions and invariants on locations, which enforce timing requirements. Additionally, synchronization between different automata is achieved through complementary actions, allowing coordinated behavior across the parallel components \cite{Behrmann2006}. During a Transistion we can also update the value of a variable or clock a \cite{upp}.
 
-    \item \textbf{Invariants} Invariants are conditions that must be True while the automaton is in a specific location~\cite{Behrmann2006}.
+%\begin{itemize}
+%    \item \textbf{Guard} A guard is a condition applied to the variables and the clocks. If is the condition is True the transistion is enable, otherwise cannot occur~\cite{Behrmann2006}.
 
-    \item \textbf{Synchronization}  In Uppaal, synchronization is based on a handshaking mechanism. When two processes take a transition simultaneously, one transition is labeled with \texttt{a!} (send) and the other with \texttt{a?} (receive). In this setup, the exclamation mark ``\texttt{!}'' denotes the sending action that actively triggers the synchronization, while the question mark ``\texttt{?}'' represents the receiving action, which waits for the corresponding send event to occur.
+%    \item \textbf{Invariants} Invariants are conditions that must be True while the automaton is in a specific location~\cite{Behrmann2006}.
 
-~\cite{Behrmann2006}.
-\end{itemize}
+%    \item \textbf{Synchronization}  In Uppaal, synchronization is based on a handshaking mechanism. When two processes take a transition simultaneously, one transition is labeled with \texttt{a!} (send) and the other with \texttt{a?} (receive). In this setup, the exclamation mark ``\texttt{!}'' denotes the sending action that actively triggers the synchronization, while the question mark ``\texttt{?}'' represents the receiving action, which waits for the corresponding send event to occur.
 
-During a Transistion we can also update the value of a variable or clock a \cite{upp}.
+%~\cite{Behrmann2006}.
+%\end{itemize}
+
+%During a Transistion we can also update the value of a variable or clock a \cite{upp}.
 \paragraph{}
 
 It is now possible to build a model using Uppaal. As an example, it will be built a Worker and Hammer system (\ref{fig:worker model}), as mentioned before.
@@ -297,9 +335,7 @@ The next phase is to check that the model verifies the properties and to do so, 
     %\item \textbf{Deadlock properties:} A deadlock is possible or not in the model.
 \end{itemize}
 
-These properties can be described using a simple CTL logic variation (TCTL)\cite{lee2009timed}. It is a branching-time temporal logic used to formally specify and verify properties of systems, and it is based on the idea that all possible execution paths a system can take can be represented in the form of a "Computation Tree" \cite{lee2009timed}.
-
-The formulas should be one of the following \cite{bengtsson2004timed}:
+These properties can be described using a simple CTL logic variation (TCTL)\cite{lee2009timed}. It is a branching-time temporal logic used to formally specify and verify properties of systems, and it is based on the idea that all possible execution paths a system can take can be represented in the form of a "Computation Tree" \cite{lee2009timed}. The formulas should be one of the following \cite{bengtsson2004timed}:
 
 \begin{itemize}
     \item A[] $\phi$ — Invariantly $\phi$
@@ -314,23 +350,22 @@ The formulas should be one of the following \cite{bengtsson2004timed}:
     
 \end{itemize}
 
-The symbols $\phi$ and $\psi$ are local properties, such as boolean expressions or clock constraints.
-
-Returning to the worker and hammer example, we can illustrate some properties using this notation. Notice that Deadlock is expressed using a special formula and IT consists of the keyword deadlock. 
+The symbols $\phi$ and $\psi$ are formulae that describe state properties, such as what is the current state and clock constrains. Returning to the worker and hammer example, we can illustrate some properties using this notation. Notice that Deadlock is expressed using a special formula and IT consists of the keyword deadlock. 
 
 \begin{itemize}
     \item \textbf{A[]!deadlock} Deadlock never occurs.
 
-    \item \textbf{A[] W.Rest} The system Worker allways reaches the state Rest.
+    \item \textbf{A[] W.Rest} The Worker always reaches the Rest state.
 
-    \item \textbf{E<> H.NailDone} The system Hammer eventually reaches state NailDone.
+    \item \textbf{E<> H.NailDone} The Hammer will eventually finish Nailing.
 
-    \item  \textbf{A<> H.NailDone} The system Hammer eventually all paths reaches state NailDone.
+    \item  \textbf{A<> H.NailDone} The Hammer eventually reaches the NailDone state on all paths.
 
-    \item \textbf{W.Work $\longrightarrow$ W.Rest} If the system Worker is in the state Work then it can reached state Rest too.
+    \item \textbf{W.Work $\longrightarrow$ W.Rest} If the Worker is in the Work state, then it will eventually reach the Rest state.
 \end{itemize}
 
-These properties can be verified on the Verifier, if the property is marked in red it means 'not satisfied' otherwise its satisfied.
+%These properties can be verified on the Verifier, if the property is marked in red it means 'not satisfied' otherwise its satisfied.
+These properties can be verified in the Verifier. The Verifier is a tool that checks if your model behaves as expected. If the property is marked in red, it means 'not satisfied' (the model does not guarantee the property). Otherwise, it is 'satisfied' (the model always meets the condition).
 
 %\paragraph{}
 
@@ -348,11 +383,11 @@ These properties can be verified on the Verifier, if the property is marked in r
 
 \section{Imitator in a Nutshell}
 
-IMITATOR is command-line only tool to perform automated parameter synthesis for parameter timed systems. This model checker takes as input a network of Parametric Timed Automata or a single Parametric Timed Automata. This type is a sub category of timed automata where clocks can be declared as parameters (without a constant pre-determined), making it particularly useful for modeling \textbf{Real-Time Systems} and \textbf{Software Product Lines (SPLs)}~\cite{IMITATOR}. In real-time systems, timing constraints often depend on environmental conditions or system configurations. By allowing certain timing constraints to remain as parameters rather than fixed values, Parametric Timed Automata enable the analysis of multiple scenarios, ensuring that the system behaves correctly under various conditions \cite{RealTimeSystems}.
+IMITATOR is command-line only tool to perform automated parameter synthesis for parameter timed systems. This model checker takes as input a network of Parametric Timed Automata. This type is a sub category of timed automata where clocks can be declared as parameters (without a constant pre-determined), making it particularly useful for modeling \textbf{Real-Time Systems} and \textbf{Software Product Lines (SPLs)}~\cite{IMITATOR}. In real-time systems, timing constraints often depend on environmental conditions or system configurations. By allowing certain timing constraints to remain as parameters rather than fixed values, Parametric Timed Automata enable the analysis of multiple scenarios, ensuring that the system behaves correctly under various conditions \cite{RealTimeSystems}.
 Similarly, in Software Product Lines (SPLs), where models need to be adapted and reused across different products or configurations, the use of parametric timing constraints avoids the need to create separate automata for each variation. A single model can be created where critical variables can be written as paramaters. This enhances flexibility and reduces redundancy in system modeling ~\cite{SPL}.
 
 
-Imitator, as a model checker, excels in verifying properties of a parametric system and provides constraints on when those properties hold. By leveraging Imitator's capabilities, one can systematically analyze a model and assess whether predefined properties specified in the property.imiprop file are satisfied. Moreover, Imitator goes beyond mere verification by offering insights into the constraints under which these properties are valid. This information is valuable for understanding the system's behavior and can guide further refinement or optimization to enhance the system's reliability and performance~\cite{IMITATOR}.
+Imitator is a model checker specialized in analyzing parametric systems. Its strength lies not only in verifying whether system properties hold but also in determining the exact conditions (parameter constraints) under which they are satisfied. By using Imitator, we can systematically evaluate a model and check if the properties defined in the property.imiprop file are valid, while also obtaining the precise parameter values required for them to hold. Moreover, Imitator goes beyond mere verification by offering insights into the constraints under which these properties are valid. This information is valuable for understanding the system's behavior and can guide further refinement or optimization to enhance the system's reliability and performance~\cite{IMITATOR}.
 
 \subsubsection{Parametric Timed Automata}
 
@@ -491,7 +526,7 @@ Introducing parameters in real-time temporal logic can indeed lead to undecidabi
 
     \item \textbf{EF-universitily}
 
-    Do all parameter allow to reach a given location \( l \)?
+    Do all parameters allow to reach a given location \( l \)?
 
     %\textcolor{red}{undecidable}
 
@@ -503,13 +538,13 @@ Introducing parameters in real-time temporal logic can indeed lead to undecidabi
 
     \item \textbf{AF-universitily}
 
-    Do all parameter allow to reach a given location \( l \) for all runs?
+    Do all parameters allow to reach a given location \( l \) for all runs?
 
     %\textcolor{red}{undecidable}
 
     \item \textbf{Language and Trace Preservation}
 
-    Given a parameter valuation,does there exists another valuations with the same untimed language?
+    For a given set of timing parameters, are there other parameter values that yield the same sequence of discrete events?
 
     %\textcolor{red}{undecidable}
 \end{itemize}
@@ -657,7 +692,7 @@ However, there are adaptations that can be applied to the automaton to ensure th
 To synthesize the system's parameters that validate the intended property based on the desired properties, Imitator offers two approaches to the parameter synthetise\cite{IMITATOR}:
 
 \begin{itemize}
-    \item \textbf{Synthesis(Synth)}
+    \item \textbf{Synthesis (Synth)}
 
     IMITATOR attempts to synthesize all parameter valuations satisfying the property.
 
@@ -667,7 +702,7 @@ To synthesize the system's parameters that validate the intended property based 
     
 \end{itemize}
 
-IMITATOR follows the "Best Effort" paradigm, meaning that attempts to synthesize a set of parameter valuations without guaranteeing termination, due to the undecidable nature of most problems in parametric timed automata. To ensure that the computation eventually halts, the tool relies on approximations, which often results in outcomes that are not sound and complete. The tool classifies its results into three categories and informs the user about them \cite{imitator_slides}.
+IMITATOR follows the "Best Effort" paradigm, meaning that attempts to synthesize a set of parameter valuations without guaranteeing termination, due to the undecidable nature of most problems in parametric timed automata. To ensure that the computation eventually halts, the tool relies on approximations, which often results in outcomes that are not sound or complete, meaning the results may include some incorrect parameter values (not sound) or miss some valid ones (not complete). The tool classifies its results into three categories and informs the user about them \cite{imitator_slides}.
 
 \begin{itemize}
     \item \textbf{Exact}
@@ -698,8 +733,7 @@ In terms of properties, IMITATOR supports a vast number of properties, including
 %\end{verbatim}
 
 
-The result is displayed in the terminal as a printout, showing the constraint applied to the parameters if they exist in the model. Otherwise, the output will be "True" or "False." Additionally, the result can be complemented with a graphical visualization, which can be requested at the end of the command using the options parameter as mentioned above.
-\vspace{1cm}
+The result is displayed in the terminal as a printout, showing the constraint applied to the parameters if they exist in the model. Otherwise, the output will be "True" or "False." Additionally, the result can be complemented with a graphical visualization, which can be requested at the end of the command using the options parameter as mentioned above. We will see this applied to examples in the next chapter.
 
 
 \begin{table}[H]
@@ -742,13 +776,13 @@ The synthesis process generates a text file containing a detailed description of
 
 \section{Uppex in a Nutshell}
 
-Uppex is a tool that allows to create a family of software product line through a list of features presented on a excel spreadsheet~\cite{uppex}. We start by ...\todo{missing text.} and we then describe how to run an use Uppex.
+Uppex is a tool that facilitates the creation of a family of software product lines using a list of features defined in an Excel spreadsheet~\cite{uppex}. The process begins by defining configurations, where each configuration represents a unique combination of features. Features correspond to system characteristics, such as "slow" or "fast". Not all feature combinations are valid, some may be semantically inconsistent. To prevent such invalid combinations, Uppex uses a separate sheet where features are organized in a tree-like structure. In this structure, features located on the same leaf cannot be selected simultaneously, ensuring that only meaningful configurations are generated. Additionally, a Limits and Queries sheet is maintained, in which queries are defined through formulas and constants are assigned predefined values according to the configuration being executed. To execute, it is necessary to ensure that both the JVM and Uppaal are installed. Once verified, the latest .jar file can be used to run the command uppex runAll model.xml.
 
 \subsection*{Overview of Software product lines}
 
 We can define a
 A software product line (SPL) %as a set of methods used to create similar/generic systems, called variants, from a set of systems that share a set of Features~\cite{Pohl2018}.%\cite{spl,spl2}.
-is a technique to describe and develop a family of software products with many common artefacts, which are called \emph{features}. 
+as a technique to describe and develop a family of software products with many common artefacts, which are called \emph{features}. 
 Each valid combination of features describes a possible software product from this SPL.
 This techniques have been used by many companies, facilitating the development, analysis, and deployment of several large software artefacts with commonalities~\cite{Pohl2018}.
 % With this, companies that implement the systems save time and money in production and focus on other developments~\cite{Pohl2018}.
@@ -761,18 +795,16 @@ into two groups~\cite{Pohl2018}:
     \item \textbf{Annotative Approaches}
 \end{itemize}
 
-In the case of Compositional Approaches Features are treated as separate systems or portions of code from the base code (this is the big idea behind composing in parallel). After certain Features, these are composed to the system and in this step there are several different ways to perform it, from simple concatenations to complex code transformation. Within the various types of parallel composition we can highlight: \textbf{feature-oriented programming},\textbf{, aspect-oriented programming} and \textbf{ delta-oriented programming}.
+In Compositional Approaches, features are treated as separate systems or code fragments that extend the base code. The key idea is to compose them in parallel. After defining certain features, they are integrated into the system. This integration can be done in different ways, ranging from simple concatenation to complex code transformations. Among the various types of parallel composition, the most notable are: \textbf{feature-oriented programming}, \textbf{aspect-oriented programming}, and \textbf{delta-oriented programming}.
 
 In the other hand we have Annotative Approaches where annotations or markings are used to control the presence or absence of the Features that we want to add to the system (in this case they are already present in the base code). For example, in C and C++ programming languages, preprocessor directives such as ifdef, ifndef, else, and endif are used to conditionally include or exclude blocks of code during compilation.
 
 
 \subsection*{Overview of Uppex}
 
-Uppex is a tool developed in Scala that uses Apache POI libraries to read Microsoft documents. Its main goal is to simplify the construction and verification of multiple Uppaal models generated from different configurations of a single file, following the principles of Software Product Lines previously studied.
+Uppex is a tool developed in Scala that uses Apache POI libraries to read Microsoft documents. Its main goal is to simplify the construction and verification of multiple Uppaal models generated from different configurations of a single file, following the principles of Software Product Lines previously studied. The tool relies on an annotation mechanism to allow customization of various parts of the model, such as channels, shared variables, data types, time bounds, and requirements.
 
-The tool relies on an annotation mechanism to allow customization of various parts of the model, such as channels, shared variables, data types, time bounds, and requirements.
-
-Uppex reads an Excel file containing the configurations and a Uppaal file with annotations, and generates a new Uppaal file for each configuration found. Each generated file replaces the original model to be verified by Uppaal. The output is an HTML report summarizing the generated configurations and the properties that were verified. The workflow follows the structure illustrated in Figure \ref{fig:Uppex WorkFlow}.
+Uppex reads an Excel file containing the configurations and a Uppaal file with the source model with annotations, and generates a new Uppaal file for each configuration found. Each generated file replaces the original model and is verified by Uppaal. The output is an HTML report summarizing the generated configurations and the properties that were verified. The workflow follows the structure illustrated in Figure \ref{fig:Uppex WorkFlow}.
 
 \begin{figure} [H]
     \centering
@@ -785,7 +817,8 @@ The declarations that indicate annotations in the Uppaal file follow the format 
 
 \subsection*{Revisiting the Worker and Hammer example}
 
-To better understand how it works, we can use the Worker and Hammer system as an example.
+%To better understand how it works, we can use the Worker and Hammer system as an example.
+We will use the Worker and Hammer system to illustrate our description.
 
 
 %Model Checking real time systems is a complex task because of nondeterminism and large number of states, which quickly leads to an explosion of states.
@@ -796,7 +829,7 @@ To better understand how it works, we can use the Worker and Hammer system as an
 \begin{figure} [H]
     \centering
     \includegraphics[width=\linewidth]{chapters/uppex.png}
-    \caption{Uppex Configuration Limits Queries Sheets}
+    \caption{Uppex Configuration, Limits and Queries Sheets}
     \label{fig:WH_uppex}
 \end{figure}
 
@@ -807,7 +840,7 @@ To better understand how it works, we can use the Worker and Hammer system as an
     \label{fig:WH_FM}
 \end{figure}
 
-Figure \ref{fig:WH_uppex} represents the Configurations, Limits, and Querie sheets, respectively. Assuming Lazy is the active configuration, the annotation block is rewritten using the following pattern:\texttt{const \$Type \$Name = \$Value; //\$Comment}, where the \texttt{\$} notation identifies the column from which the value should be extracted and replaced. Furthermore, as previously explained, only the values whose Feature matches the selected configuration (in this case, Lazy) or are left blank will be considered.
+Figure \ref{fig:WH_uppex} represents the Configurations, Limits, and Querie sheets, respectively. Assuming Lazy is the active configuration, the annotation block is rewritten using the following pattern:\texttt{const \$Type \$Name = \$Value; //\$Comment}, where the \texttt{\$} notation identifies the column from which the value should be extracted and replaced. Furthermore, as previously explained, only the values whose Feature matches the selected configuration (in this case, Lazy) are left blank will be considered.
 \paragraph{}
 
 %% usar fonte do codigo imitator
@@ -869,11 +902,7 @@ The ``<queries>'' sheet follows the same logic, but it refers to a XML annotatio
 \label{fig:worker-config}
 \end{figure}
 
-It is also important to highlight the constraints on feature combinations illustrated in Figure \ref{fig:WH_FM}. For instance, the user cannot select both Lazy and Overworker in the same configuration, thus preventing illogical or inconsistent combinations.
-
-Once the Excel configuration is complete, Uppex can be executed. The tool is distributed as a .jar file, which means it can be run directly from the command line.
-
-Uppex offers several execution options, allowing for flexible use depending on the user's needs. For example, it is possible to:
+It is also important to highlight the constraints on feature combinations illustrated in Figure \ref{fig:WH_FM}. For instance, the user cannot select both Lazy and Overworker in the same configuration, thus preventing illogical or inconsistent combinations. Once the Excel configuration is complete, Uppex can be executed. The tool is distributed as a .jar file, which means it can be run directly from the command line. Uppex offers several execution options, allowing for flexible use depending on the user's needs. For example, it is possible to:
 
 \begin{itemize}
     \item Run a specific configuration only (e.g., run the configuration named Main);

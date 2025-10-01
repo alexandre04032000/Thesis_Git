@@ -79,7 +79,7 @@ The Imitator tool can always be divided into three main parts. In each part, the
     \item \textbf{Initial state definition}
 
     The initial state definition section is split between the discrete initialization and the continuous initialization. This section starts with the keyword \kw{init}, with each condition separated by \kw{\&}.
-    The discrete initialization (optional introduced by the discrete keyword) assigns an initial value to each discrete (global) variable, and sets the initial location for each automaton.
+    The discrete initialization (optional introduced by the discrete keyword) assigns an initial value to each discrete variable, and sets the initial location for each automaton.
      The continuous initialization (optional introduced by the continuous keyword) defines the initial constraints over clocks and parameters (possibly also using discrete variables).
 
     \begin{figure}[H]
@@ -103,11 +103,7 @@ The Imitator tool can always be divided into three main parts. In each part, the
 
 Finally, in terms of the syntax of the queries, which, as explained earlier, are written in a separate file, the query consists of the synthesis mode (synth or witness) and the synthesis algorithm. This condition is known as a state predicate that defines a specific state of an automaton. It typically takes the form loc[AUTOMATON] = LOCATION, where AUTOMATON is the name of the automaton and LOCATION is the name of a location within it. State predicates support logical operations like conjunction (AND), disjunction (OR), and can also involve global discrete variables \cite{IMITATOR}. The query is stored in a separate file with the \texttt{.imiprop} extension.
 
-To check if the system is syntactically correct and in the desired format, we save the code in a file with the .imi extension (e.g., system.imi). Then, we execute the following command in the terminal: \texttt{./imitator system.imi [hammer\_proprities.imiprop]}
-
- 
-
-The system.imi file serves as a model, representing various systems. Alongside, the property.imiprop file contains all the properties that we aim to check. The -option flag in the command line allows to specify the desired output file format, whether it be PNG, Uppaal, or any other preferred format. It's important to note that the parameters enclosed in square brackets are optional~\cite{IMITATOR}.
+To check if the system is syntactically correct and in the desired format, we save the code in a file with the .imi extension (e.g., system.imi). Then, we execute the following command in the terminal: \texttt{./imitator system.imi [hammer\_proprities.imiprop]}. The system.imi file serves as a model, representing various systems. Alongside, the property.imiprop file contains all the properties that we aim to check. The -option flag in the command line allows to specify the desired output file format, whether it be PNG, Uppaal, or any other preferred format. It's important to note that the parameters enclosed in square brackets are optional~\cite{IMITATOR}.
 
 \section{Installing Imitator}
 The easiest and fastest way to install Imitator is by using Docker. Other alternatives can be found online at \url{https://www.imitator.fr/}. You can download the Imitator docker image with the following command: \texttt{docker pull imitator/imitator}. The developers of Imitator recommended to run the container from a bash terminal using a shared directory with the host computer. This facilitates extracting the results from using Imitator within the Docker image.
@@ -121,7 +117,7 @@ In the next chapter, as will be explained, the command used in the Backend is qu
 
 \section{Examples}\label{sec:examples}
 
-We illustrate the syntax defined above with three more complex examples:
+We illustrate the syntax defined above with three examples:
 % With the syntax defined, we now move on to the examples, as previously mentioned. Three examples will be presented:
 a \emph{Coffee Machine}, a \emph{Worker and Hammer System}, and a \emph{ATM Machine}. For each system a set of properties will be tested to demonstrate the capabilities of the Imitator tool.
 
@@ -372,15 +368,11 @@ The next step is the construction of the automaton. In this case, a single autom
 \end{lstlisting}
 
 
-The coffee machine's automaton consists of four states. The first state is \textbf{Standby(\textit{idle})}, where the system waits indefinitely for the user to take action to start making coffee. The next state is \textbf{\textit{add\_sugar}}, where the user can choose to add sugar. There is a time limit (p₂) for adding sugar, and a restriction (p₁) on how often sugar can be added in quick succession. These restrictions are enforced using invariants, in the state add\_sugar, with the invariant y ≤ p₂ and in the preparing\_coffee state with the invariant y ≤ p₃.The synchronization here is based on the \textit{press} event, which triggers the action of adding sugar and starts the process.
+The coffee machine's automaton consists of four states. The first state is \textbf{Standby(\textit{idle})}, where the system waits indefinitely for the user to take action to start making coffee. The next state is \textbf{\textit{add\_sugar}}, where the user can choose to add sugar. There is a time limit (p₂) for adding sugar, and a restriction (p₁) on how often sugar can be added in quick succession. These restrictions are enforced using invariants, in the state add\_sugar, with the invariant y ≤ p₂ and in the preparing\_coffee state with the invariant y ≤ p₁.The synchronization here is based on the \textit{press} event, which triggers the action of adding sugar and starts the process. Next is the coffee preparation state\textbf{(\textit{preparing\_coffee})}, which takes p₃ time units to complete. The synchronization with the coffee event triggers the completion of the coffee preparation. Finally, in the last state(\textbf{\textit{cdone}}), if the user presses the button again within 10 time units, the system goes back to add\_sugar and repeats the process. This synchronization is triggered by the \textit{press} event. If the user does not press the button within the allowed time, the system synchronizes with the \textit{sleep} event, returning to the Standby state.
 
-Next is the coffee preparation state\textbf{(\textit{preparing\_coffee})}, which takes p₃ time units to complete. The synchronization with the coffee event triggers the completion of the coffee preparation.
+It is important to note that the last state, called the \textbf{\textit{accepting loc}}, is different from the others because it represents a 'final' or 'accepting' state. In simple terms, once the system reaches this state, the coffee is prepared and ready to be served. This distinction is useful during the verification process, as it allows us to check whether the automaton can reach a successful end state instead of getting stuck in infinite loops within intermediate states \cite{IMITATOR}.
 
-Finally, in the last state(\textbf{\textit{cdone}}), if the user presses the button again within 10 time units, the system goes back to add\_sugar and repeats the process. This synchronization is triggered by the \textit{press} event. If the user does not press the button within the allowed time, the system synchronizes with the \textit{sleep} event, returning to the Standby state.
-
-It is important to highlight that the last state is different from the others (\textbf{\textit{accepting loc}}), which indicates that this is a "final" or "accepting" state. In other words, when the system reaches this state, the coffee has already been prepared and is ready to be served. This helps in the verification process by analyzing whether the automaton can reach a successful state, avoiding infinite loops in intermediate states \cite{IMITATOR}.
-
-To simplify the model, we can summarize it in Transition Table \ref{tab:automato_cafe}.
+The model is summarized in Transition Table \ref{tab:automato_cafe}.
 
 \paragraph{}
 
@@ -449,7 +441,7 @@ Considering that we saved our model in the \textbf{mod.imi} file, we obtain the 
 
 \subsubsection{System Analysis}
 
-Once the model is built, we can proceed to property verification. We begin with parameter synthesis to prevent deadlock. To achieve this, we need to create a separate \texttt{.imiprop} file, distinct from the .imi file containing our model, as explained in the previous chapter.
+Once the model is built, we can proceed to property verification. We start with parameter synthesis to ensure that deadlocks are avoided. To achieve this, we need to create a separate \texttt{.imiprop} file, distinct from the .imi file containing our model, as explained in the previous chapter.
 
 
 Inside the file, we define the property to be verified. In this case, related to deadlock. The syntax is as follows : \texttt{property := \#synth DeadlockFree;}
@@ -466,14 +458,10 @@ The result is stored in a \texttt{.res} file with the same name as the file wher
     & p1 = 0
 \end{verbatim}
 
-Any values chosen for the parameters, as long as they satisfy the given constraint, ensure that the system does not reach a deadlock.
-
-We can also determine the maximum or minimum parameter value that ensures a given property is satisfied. For example, we may want to find the shortest possible time between two consecutive sugar requests(\( p1 \)) while still allowing the coffee to be served to the user (i.e., reaching the location \texttt{cdone}).
+Any values chosen for the parameters, as long as they satisfy the given constraint, ensure that the system does not reach a deadlock. We can also determine the maximum or minimum parameter value that ensures a given property is satisfied. For example, we may want to find the shortest possible time between two consecutive sugar requests(\( p1 \)) while still allowing the coffee to be served to the user (i.e., reaching the location \texttt{cdone}).
 
 To achieve this, we can use the following property: 
-\texttt{property := \#synth EFpmin(loc[machine] = cdone, p1);}
-
-With this property, we obtain the following result:
+\texttt{property := \#synth EFpmin(loc[machine] = cdone, p1);} With this property, we obtain the following result:
 
 \begin{verbatim}
      p3 >= p2
@@ -482,6 +470,8 @@ With this property, we obtain the following result:
 \end{verbatim}
 
 The parameter \( p1 \) can be 0, meaning that the request for sugar can be made instantly. However, this is only possible as long as the time required to prepare a coffee (\( p1 \)) is greater than the time interval in which sugar can be requested (\( p2 \)). Additionally, \( p2 \) must be strictly positive to ensure a valid sequence of events.
+
+A synthesis of both verified properties can be found in the table \ref{tab:property_results}
 
 \begin{table}[h!]
 \centering
@@ -511,7 +501,7 @@ $p_1 = 0$
 
 \subsection{Worker and Hammer System}
 
-Now we have the "Worker and Hammer" system, as discussed in the chapter and implemented in UPPAAL. This system represents the interaction between a worker and a hammer to perform a repetitive task, such as hammering nails.
+Now we have the "Worker and Hammer" system, as discussed in the State of the Art chapter and implemented in UPPAAL. This system represents the interaction between a worker and a hammer to perform a repetitive task, such as hammering nails.
 
 As in the other examples, we start by defining the variables and clocks of the automata.
 
@@ -529,11 +519,7 @@ As in the other examples, we start by defining the variables and clocks of the a
 \end{lstlisting}
 
 
-The \textbf{t} and \textbf{session} timers are used to measure elapsed time for different purposes. The t timer tracks short-duration actions, such as hammering a nail or placing a new one, while the session timer records the total time a worker has spent working in a session, determining when they need to take a break.
-
-The variables \textbf{sessionTime}, \textbf{reactTime}, and \textbf{totalNails} are defined as parameters, unlike in the UPPAAL example, where they had fixed values. \textbf{sessionTime} represents the maximum time a worker can work before stopping, \textbf{reactTime} is the maximum time allowed for the worker to hit or place a new nail, and \textbf{totalNails} indicates the total number of new nails available.
-
-Finally, the variable \textbf{Nails} is defined as a discrete type, specifically an integer, and serves as an accumulator for the number of completed nails. Its value is initialized to 0 in the final section of the code. With all variables declared, the next step is the definition of the automata.
+The \textbf{t} and \textbf{session} timers are used to measure elapsed time for different purposes. The t timer tracks short-duration actions, such as hammering a nail or placing a new one, while the session timer records the total time a worker has spent working in a session, determining when the worker need to take a break. The variables \textbf{sessionTime}, \textbf{reactTime}, and \textbf{totalNails} are defined as parameters, unlike in the UPPAAL example, where they had fixed values. \textbf{sessionTime} represents the maximum time a worker can work before stopping, \textbf{reactTime} is the maximum time allowed for the worker to hit or place a new nail, and \textbf{totalNails} indicates the total number of new nails available. Finally, the variable \textbf{Nails} is defined as a discrete type, specifically an integer, and serves as an accumulator for the number of completed nails. Its value is initialized to 0 in the final section of the code. With all variables declared, the next step is the definition of the automata.
 %\paragraph{}
 
 \begin{lstlisting}[language=UPPAAL]
@@ -576,7 +562,7 @@ The system consists of two automata: \textbf{Worker} and \textbf{Hammer}. The \t
 
 The \textbf{Hammer} automaton represents the interaction of the hammer with the nails, alternating between the states NailUp (new nail), NailHalf (partially hammered nail), and NailDone (completely hammered nail). Initially, it is in the NailUp state, where upon receiving the synchronization Hit, it transitions to NailHalf. Upon receiving a second synchronization Hit, it transitions to NailDone, incrementing the variable nails if countNails is activated. When the nail is completely hammered, the system can insert a new nail through the synchronization newNail?, returning to the NailUp state, provided that infiniteNails is true or nails < totalNails. 
 
-The synchronization between the two automata occurs through the channels Hit and newNail in the Worker, which connect to Hit and newNail in the Hammer, ensuring that the sequence of events is consistent and respects the temporal constraints imposed by the clocks t and session.
+The synchronization between the two automata occurs through the channels Hit and newNail presented in the Worker and Hammer automata, ensuring that the sequence of events is consistent and respects the temporal constraints imposed by the clocks t and session.
 
 We can better visualize the behavior of the Worker automaton in Table \ref{tab:wh_t1} and of the Hammer automaton in Table \ref{tab:wh_t2}.
 \paragraph{}
@@ -645,11 +631,7 @@ As in the previous examples, we convert our model code into a visual representat
 
 \subsubsection{System Analysis}
 
-As before, we start by determining the parameter values needed to avoid a deadlock. In other words, we analyze how the worker's working time, the time required to hammer or place a new nail, and the number of nails must be set to prevent this situation.
-
-The property, as previously mentioned, is stored in a separate \texttt{.imiprop} file and has the following syntax: \texttt{property := synth DeadlockFree;}
-
-Analyzing the \texttt{.res} file, the parametric interval that guarantees the absence of deadlock is as follows:
+As before, we start by determining the parameter values needed to avoid a deadlock. In other words, we analyze how the worker's working time, the time required to hammer or place a new nail, and the number of nails must be set to prevent this situation. The property, as previously mentioned, is stored in a separate \texttt{.imiprop} file and has the following syntax: \texttt{property := synth DeadlockFree;} Analyzing the \texttt{.res} file, the parametric interval that guarantees the absence of deadlock is as follows:
 
 \begin{verbatim}
      0 > reactTime
@@ -668,7 +650,7 @@ The parametric interval is of the form:
     & sessionTime >= reactTime
 \end{verbatim}
 
-To ensure that the completion of the action is guaranteed, reactTime must be a positive value, and additionally, it must be ensured that sessionTime is always greater than or equal to reactTime.
+To ensure that the completion of the action is guaranteed, reactTime must be a positive value, and additionally, it must be ensured that sessionTime is always greater than or equal to reactTime. Table \ref{tab:property_results} summarizes the verified properties and their corresponding synthesis results. The first property ensures that the system avoids deadlock by constraining the parameters \texttt{reactTime} and \texttt{sessionTime}. The second property determines the conditions under which the system can reach the target location \texttt{cdone}, ensuring progress towards the completion of the task. Together, these results confirm that the model behaves correctly within the specified parameter ranges.
 
 
 \begin{table}[h!]
@@ -700,7 +682,7 @@ $\land sessionTime \geq reactTime$\\
 
 \subsection{ATM Machine}
 
-The final example is of a simple ATM with only two functions: balance inquiry and cash withdrawal, considering time constraints for each phase of the operation. The example was also taken from the official Imitator website \cite{IMITATOR}.
+The final example is of a simple ATM with only two functions: balance inquiry and cash withdrawal, considering time constraints for each phase of the operation. The example was also taken from the official Imitator website \cite{IMITATOR}. We begin by declaring the system's variables and clocks:
 
 %\begin{figure} [H]
 %    \centering
@@ -710,9 +692,6 @@ The final example is of a simple ATM with only two functions: balance inquiry an
 %\end{figure}
 
 %\paragraph{}
-
-We begin by declaring the system's variables and clocks:
-
 \begin{lstlisting}[language=UPPAAL]
     var
     x,y,z : clock;
@@ -724,9 +703,7 @@ We begin by declaring the system's variables and clocks:
 
 
 Clock x controls the duration of each operation and is used to limit the time allowed for the selected operation. For example, if x = 15 and the chosen operation is withdraw, the user has 15 time units to complete it. Clock y is responsible for tracking the login time, i.e., the time the user takes to provide access credentials.
-Finally, clock z monitors the total session time (login + operations).
-
-Regarding the variables, they are all defined as parameters: p1 is the maximum allowed session time, p2 defines the maximum time for login, and p3 sets the maximum time allowed per operation, whether it is a balance inquiry or a withdrawal.
+Finally, clock z monitors the total session time (login + operations). Regarding the variables, they are all defined as parameters: p1 is the maximum allowed session time, p2 defines the maximum time for login, and p3 sets the maximum time allowed per operation, whether it is a balance inquiry or a withdrawal.
 
 \begin{lstlisting}[language=UPPAAL]
     automaton pta
@@ -756,9 +733,7 @@ Regarding the variables, they are all defined as parameters: p1 is the maximum a
 \end{lstlisting}
 
 
-The automaton is composed of five locations: Idle, Start, Login, Withdrawals, and Check. The initial state is Idle, which represents the ATM being in a standby state, waiting for the start of an operation. When this occurs, all clocks are reset to 0 and the automaton transitions to the Start location. This location marks the beginning of the user interaction. The invariant z <= p1 limits the session duration, with p1 representing the maximum session time; if this limit is exceeded, the system returns to the Idle state (standby). Otherwise, it proceeds to the Login state, where clock y is reset. This clock tracks the time the user takes to log in. In this location, the machine waits for the user to enter their credentials, with the constraint that the login duration must not exceed either of the specified time bounds, as indicated by the invariant \texttt{y <= p2 \&\& z <= p1}. If both conditions are satisfied, the system moves to the Withdrawals location if that was the selected function, or to Check otherwise. In both cases, clock x is reset. If the selected operation is Withdrawal, the system transitions to that location, giving the user a limited time to complete the withdrawal, which cannot exceed p3, as shown by the invariant \texttt{x <= p3}. If the option is Check, it moves to the corresponding location, where the same time restriction applies, also enforced by the invariant \texttt{x <= p3}. In both cases, after completing the action, the system returns to the Login location, allowing the user to repeat or change the selected operation.
-
-As with the previous examples, we can construct a transition table for the system, as shown in Figure \ref{tab:atm_tt}.
+The automaton is composed of five locations: Idle, Start, Login, Withdrawals, and Check. The initial state is Idle, which represents the ATM being in a standby state, waiting for the start of an operation. When this occurs, all clocks are reset to 0 and the automaton transitions to the Start location. This location marks the beginning of the user interaction. The invariant z <= p1 limits the session duration, with p1 representing the maximum session time; if this limit is exceeded, the system returns to the Idle state (standby). Otherwise, it proceeds to the Login state, where clock y is reset. This clock tracks the time the user takes to log in. In this location, the machine waits for the user to enter their credentials, with the constraint that the login duration must not exceed either of the specified time bounds, as indicated by the invariant \texttt{y <= p2 \&\& z <= p1}. If both conditions are satisfied, the system moves to the Withdrawals location if that was the selected function, or to Check otherwise. In both cases, clock x is reset. If the selected operation is Withdrawal, the system transitions to that location, giving the user a limited time to complete the withdrawal, which cannot exceed p3, as shown by the invariant \texttt{x <= p3}. If the option is Check, it moves to the corresponding location, where the same time restriction applies, also enforced by the invariant \texttt{x <= p3}. In both cases, after completing the action, the system returns to the Login location, allowing the user to repeat or change the selected operation. As with the previous examples, we can construct a transition table for the system, as shown in Figure \ref{tab:atm_tt}.
 
 \begin{table}[h!]
 \centering
@@ -801,9 +776,7 @@ Finally, we define the parameter constraints and the initial location of the aut
 \end{lstlisting}
 
 
-As mentioned, the system starts in the Idle location, which represents the standby state. Additionally, the only constraint imposed on the parameters is that they must be greater than 0.
-
-As with the previous examples, we can convert the model into a figure, as shown in Figure \ref{fig:ATM_output}.
+As mentioned, the system starts in the Idle location, which represents the standby state. Additionally, the only constraint imposed on the parameters is that they must be greater than 0. As with the previous examples, we can convert the model into a figure, as shown in Figure \ref{fig:ATM_output}.
 
 
 \begin{figure} [H]
@@ -815,9 +788,7 @@ As with the previous examples, we can convert the model into a figure, as shown 
 
 \subsubsection{System Analysis}
 
-As in the previous examples, the first property to be verified is deadlock-freedom, ensuring that the system does not reach any state from which execution cannot proceed. The syntax for this property, as previously mentioned, is: \texttt{property := synth DeadlockFree}.
-
-The parametric interval that guarantees the verification of the property is as follows:
+As in the previous examples, the first property to be verified is deadlock-freedom, ensuring that the system does not reach any state from which execution cannot proceed. The syntax for this property, as previously mentioned, is: \texttt{property := synth DeadlockFree}. The parametric interval that guarantees the verification of the property is as follows:
 
 \begin{verbatim}
     p3 >= 0
@@ -825,11 +796,9 @@ The parametric interval that guarantees the verification of the property is as f
     & p1 >= 0
 \end{verbatim}
 
-Whatever values the parameters may take, it must be ensured that they are always positive in order to guarantee that "regardless of the situation, the system always has an action to take."
+It tell that whatever values the parameters may take, it must be ensured that they are always positive in order to guarantee that "regardless of the situation, the system always has an action to take."
 
-The next property to be verified is a liveness property that searches for at least one cycle in the state graph that goes through the Withdrawals state and can be executed infinitely (i.e., without deadlock), meaning "it is possible to withdraw money". For this purpose, we use the CycleThrough algorithm, which was briefly mentioned in the previous chapter. The corresponding syntax is: \texttt{property := synth CycleThrough(loc[pta] = Withdrawals);}.
-
-The returned parametric interval guarantees that the cycle exists for any non-negative values of parameters p1, p2, and p3.
+The next property to be verified is a liveness property that searches for at least one cycle in the automaton that goes through the Withdrawals state and can be executed infinitely (i.e., without deadlock). In practical terms, this ensures that it is always possible to perform withdrawals. For this purpose, we use the CycleThrough algorithm, which was briefly mentioned in the previous chapter. The corresponding syntax is: \texttt{property := synth CycleThrough(loc[pta] = Withdrawals);}. The returned parametric interval guarantees that the cycle exists for any non-negative values of parameters p1, p2, and p3.
 
 \begin{verbatim}
     p3 >= 0
@@ -839,7 +808,7 @@ The returned parametric interval guarantees that the cycle exists for any non-ne
 
 Additionally, Imitator provides extra information such as the depth at which the cycle was found (i.e., the number of transitions required to complete it), as well as the number of states generated and effectively explored during the analysis.
 
-A summary of the analyzed properties and their corresponding results can be found in Figure \ref{tab:property_results_atm}.
+A summary of the analyzed properties and their corresponding results can be found in Table \ref{tab:property_results_atm}.
 
 \begin{table}[h!]
 \centering

@@ -5,45 +5,45 @@
 \contentsline {figure}{\numberline {2}{\ignorespaces Spin Process}}{5}{figure.caption.6}%
 \contentsline {figure}{\numberline {3}{\ignorespaces Prism Process}}{6}{figure.caption.7}%
 \contentsline {figure}{\numberline {4}{\ignorespaces Worker/Hammer Automata Example. The image on the left automaton represents the Worker, while the on on the right represents the Hammer.\relax }}{10}{figure.caption.8}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Uppex WorkFlow \cite {proenca_uppex}\relax }}{20}{figure.caption.11}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Uppex Configuration Limits Queries Sheets\relax }}{21}{figure.caption.12}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Uppex Feature Model Sheet\relax }}{21}{figure.caption.13}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Limits Block Rewritten with new values\relax }}{22}{figure.caption.14}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Queries Block Rewritten with new values\relax }}{23}{figure.caption.15}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Uppex WorkFlow \cite {proenca_uppex}\relax }}{20}{figure.caption.10}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Uppex Configuration, Limits and Queries Sheets\relax }}{21}{figure.caption.11}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Uppex Feature Model Sheet\relax }}{21}{figure.caption.12}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Limits Block Rewritten with new values\relax }}{22}{figure.caption.13}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Queries Block Rewritten with new values\relax }}{23}{figure.caption.14}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {10}{\ignorespaces Simple Coffee Machine with only one button to control all operations.}}{29}{figure.caption.20}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Coffee Machine Automata}}{32}{figure.caption.22}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Worker and Hammer Automata}}{37}{figure.caption.26}%
-\contentsline {figure}{\numberline {13}{\ignorespaces ATM Automata}}{41}{figure.caption.29}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Simple Coffee Machine with only one button to control all operations.}}{29}{figure.caption.19}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Coffee Machine Automata}}{32}{figure.caption.21}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Worker and Hammer Automata}}{37}{figure.caption.25}%
+\contentsline {figure}{\numberline {13}{\ignorespaces ATM Automata}}{41}{figure.caption.28}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {14}{\ignorespaces Configurations Sheet Uppex\relax }}{46}{figure.caption.32}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Feature Model Sheet Uppex\relax }}{46}{figure.caption.33}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Limits Sheet\relax }}{47}{figure.caption.34}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Parameters Constrain Sheet\relax }}{47}{figure.caption.34}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Queries Sheet Uppex\relax }}{47}{figure.caption.35}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Limits Sheet from Uppex \relax }}{50}{figure.caption.38}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Uppaal Parser Data Structure\relax }}{51}{figure.caption.40}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Imitator Parser Data Structure\relax }}{52}{figure.caption.41}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Updated FeatExpr Enum\relax }}{54}{figure.caption.45}%
-\contentsline {figure}{\numberline {23}{\ignorespaces FeatVal Enum\relax }}{55}{figure.caption.46}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Updated Eval Function\relax }}{55}{figure.caption.47}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Configurations Sheet Uppex\relax }}{60}{figure.caption.50}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Limits Sheet\relax }}{60}{figure.caption.51}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Parameters Constrain Sheet\relax }}{60}{figure.caption.51}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Queries Sheet Uppex\relax }}{61}{figure.caption.52}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Configurations Sheet Uppex\relax }}{46}{figure.caption.31}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Feature Model Sheet Uppex\relax }}{46}{figure.caption.32}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Limits Sheet\relax }}{47}{figure.caption.33}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Parameters Constrain Sheet\relax }}{47}{figure.caption.33}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Queries Sheet Uppex\relax }}{47}{figure.caption.34}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Limits Sheet from Uppex \relax }}{50}{figure.caption.37}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Uppaal Parser Data Structure\relax }}{51}{figure.caption.39}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Imitator Parser Data Structure\relax }}{52}{figure.caption.40}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Updated FeatExpr Enum\relax }}{54}{figure.caption.44}%
+\contentsline {figure}{\numberline {23}{\ignorespaces FeatVal Enum\relax }}{55}{figure.caption.45}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Updated Eval Function\relax }}{55}{figure.caption.46}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Configurations Sheet Uppex\relax }}{60}{figure.caption.49}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Limits Sheet\relax }}{60}{figure.caption.50}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Parameters Constrain Sheet\relax }}{60}{figure.caption.50}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Queries Sheet Uppex\relax }}{61}{figure.caption.51}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {29}{\ignorespaces Uppex Interface Menu\relax }}{64}{figure.caption.53}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {29}{\ignorespaces Uppex Interface Menu\relax }}{64}{figure.caption.52}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {30}{\ignorespaces Grouped by Requerimets Report Result\relax }}{71}{figure.caption.54}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Grouped by Requerimets Report Result\relax }}{72}{figure.caption.55}%
-\contentsline {figure}{\numberline {32}{\ignorespaces Coffee Automata Products Part 1 Report Result\relax }}{73}{figure.caption.56}%
-\contentsline {figure}{\numberline {33}{\ignorespaces Coffee Automata Products Part 2 Report Result\relax }}{74}{figure.caption.57}%
-\contentsline {figure}{\numberline {34}{\ignorespaces Coffee Automata Products Part 3 Report Result\relax }}{75}{figure.caption.58}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {35}{\ignorespaces Grouped by Product Coffee Report Result\relax }}{76}{figure.caption.59}%
-\contentsline {figure}{\numberline {36}{\ignorespaces Grouped by Product Report Result\relax }}{77}{figure.caption.60}%
-\contentsline {figure}{\numberline {37}{\ignorespaces Automata Products Part 1 Report Result\relax }}{78}{figure.caption.61}%
-\contentsline {figure}{\numberline {38}{\ignorespaces Automata Products Part 2 Report Result\relax }}{79}{figure.caption.62}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {30}{\ignorespaces Grouped by Requerimets Report Result\relax }}{71}{figure.caption.53}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Grouped by Requerimets Report Result\relax }}{72}{figure.caption.54}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Coffee Automata Products Part 1 Report Result\relax }}{73}{figure.caption.55}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Coffee Automata Products Part 2 Report Result\relax }}{74}{figure.caption.56}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Coffee Automata Products Part 3 Report Result\relax }}{75}{figure.caption.57}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {35}{\ignorespaces Grouped by Product Coffee Report Result\relax }}{76}{figure.caption.58}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Grouped by Product Report Result\relax }}{77}{figure.caption.59}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Automata Products Part 1 Report Result\relax }}{78}{figure.caption.60}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Automata Products Part 2 Report Result\relax }}{79}{figure.caption.61}%
