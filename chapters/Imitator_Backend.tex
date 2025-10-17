@@ -104,7 +104,6 @@ To download the new version of Uppex, the following steps must be followed:
 
 %colocar footnote e refeir que se pode compilar o código fonte
 These instructions are described in more detail in the official documentation of the tool, which has been upgraded to include the changes implemented in the new version and can be accessed through the following link: \url{https://github.com/alexandre04032000/uppex-imitator/blob/Uppex-Imitator/README.md}
-\todo{use just the landing github page}
 %codigo fonte mais instruções encontram-se na documentação e resumir os passos, dependencias e como correr/compilar
 \section{Using Uppex with Imitator by example}
 %esta secção running example to use throw this section
@@ -199,7 +198,7 @@ Finally, we configured the Queries sheet (Figure \ref{fig:Q_CM}). For the sake o
 
 With the parameterized model, we can run the JAR file, and the operating mode is exactly the same as the old version. Within the same directory, we need to have the JAR file and we can name it uppex.jar, the Excel file, and the Imitator file, with the last two files needing to have the same name.
 
-In the terminal, we use the command: \texttt{java -jar uppex.jar -runAll Imitator\_Model.imi}, thus compiling all configurations. In each configuration, the deadlock property will be verified, and the results will be presented in an HTML file grouped by property and by configuration. For our example, the results can be found in Appendix C.\todo{use ref}
+In the terminal, we use the command: \texttt{java -jar uppex.jar -runAll Imitator\_Model.imi}, thus compiling all configurations. In each configuration, the deadlock property will be verified, and the results will be presented in an HTML file grouped by property and by configuration. For our example, the results can be found in Appendix C.
 
 %discussion
 As expected, for each of the configurations, in order for the property to be satisfied, $p_1$, $p_2$, and $p_3$ must fall within a specific range determined by the algorithm used. It is worth noting that the fixed\_coffee configuration does not have any associated interval since, as previously explained, all its variables are assigned fixed values. This turns it into a parametric model that, for the chosen values, verifies the condition. In this case, it reduces to the model checking of timed automata.

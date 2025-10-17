@@ -866,38 +866,44 @@ const int reactTime = 20; // Maximum time that the worker can take to
 \label{fig:worker-config}
 \end{figure}
 
-The ``<queries>'' sheet follows the same logic, but it refers to a XML annotation, using the following pattern: \texttt{\footnotesize const \$Type \$Name = \$Value; // \$Comment}
+The "<queries>"" sheet follows the same principle, but in this case it corresponds to an XML annotation that defines temporal properties to be verified by UPPAAL. Each query is represented according to the structure:
+
+\texttt{<query><formula>$Formula</formula><comment>$Comment</comment></query>}
+
+Where the \texttt{formula} specifies the property to be checked and the \texttt{comment} provides a human-readable description. An example of a "<queries>"" block is presented below, where different temporal logic properties are expressed to ensure system correctness, such as the absence of deadlocks, the ability of processes to reach certain states, and behavioral constraints between actions:
 
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.9\linewidth}
 {\footnotesize
 \begin{verbatim}
-    <queries>
-    <query>
-      <formula>A[]!deadlock</formula>
-      <comment>No deadlocks</comment>
-    </query>
-    <query>
-      <formula>A[] W.Rest</formula>
-      <comment>The worker is always resting</comment>
-    </query>
-    <query>
-      <formula>E&lt;&gt; H.NailDone</formula>
-      <comment>The hammer can finish a nail</comment>
-    </query>
-    <query>
-      <formula>A&lt;&gt; H.NailDone</formula>
-      <comment>The hammer must complete a nail</comment>
-    </query>
-    <query>
-      <formula>W.Work --&gt; W.Rest</formula>
-      <comment>The worker must be able to rest after working</comment>
-    </query>
-    </queries>
+<queries>
+<query>
+<formula>A[]!deadlock</formula>
+<comment>No deadlocks</comment>
+</query>
+<query>
+<formula>A[] W.Rest</formula>
+<comment>The worker is always resting</comment>
+</query>
+<query>
+<formula>E<> H.NailDone</formula>
+<comment>The hammer can finish a nail</comment>
+</query>
+<query>
+<formula>A<> H.NailDone</formula>
+<comment>The hammer must complete a nail</comment>
+</query>
+<query>
+<formula>W.Work --> W.Rest</formula>
+<comment>The worker must be able to rest after working</comment>
+</query>
+</queries>
 \end{verbatim}
 }
 \end{minipage}
+\caption{Example of a \texttt{<queries>} block specifying temporal logic properties in UPPAAL.}
+\end{figure}
 \caption{Queries Block Rewritten with new values}
 \label{fig:worker-config}
 \end{figure}
